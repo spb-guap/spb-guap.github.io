@@ -1,3 +1,32 @@
 .language-bar__container {
     display: flex;
 }
+
+.language-bar__container a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.language-bar__container span {
+    justify-self: center;
+    align-self: center;
+}
+
+.dropdown-inactive {
+    color: #999 !important;
+}
+
+.dropdown-active {
+    background-color: #005aaa;
+    color: rgba(255, 255, 255, .8);
+}
+
+.language-dropdown__item {
+    text-decoration: none;
+    display: block;
+    clear: both;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0.6em 1em;
+    font-weight: 400;
+}

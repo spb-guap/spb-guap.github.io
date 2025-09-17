@@ -1,12 +1,15 @@
-// exported index.js
+
 export function useModalOnAhrefs()
 {
     const elements = document.querySelectorAll('a');
     elements.forEach(function(element) {
-        element.addEventListener('click', function(e) {
-            e.preventDefault();
-            showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">');
-        });
+        // Skip language dropdown items since we handled them in another place
+        if (!element.classList.contains('language-dropdown__item')) {
+            element.addEventListener('click', function(e) {
+                e.preventDefault();
+                showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">');
+            });
+        }
     });
 }
 
