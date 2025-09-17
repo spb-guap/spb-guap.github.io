@@ -5,7 +5,8 @@ const elements = document.querySelectorAll('a'); // Selects all elements with th
 // const elements = document.getElementsByClassName('my-class');
 
 elements.forEach(function(element) {
-    element.addEventListener('click', function() {
+    element.addEventListener('click', function(e) {
+        e.preventDefault();
         // This function will be executed when an element is clicked
         console.log('Element clicked:', element);
         // You can add more logic here, e.g., modify the element's style or content
