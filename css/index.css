@@ -227,7 +227,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .main-container {
-        flex-direction: column;
+        /* flex-direction: column; */
     }
     
     .sidebar {
@@ -235,7 +235,7 @@ body {
     }
     
     .navbar {
-        flex-direction: column;
+        /* flex-direction: column; */
     }
     
     .header-container {
