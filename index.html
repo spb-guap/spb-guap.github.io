@@ -9,12 +9,54 @@
 <body>
     <!-- Header with University Branding -->
     <header class="header">
+        <div id="hfsec" class="header-first-section collapsed">
+            <div class="header-first-section__container">
+                <nav class="header-first-section__navbar">
+                    <ul class="header-first-section__list">
+                        <li class="nav-item"><a class="nav-link nav-link-small" href="/profor">Школьникам</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-small" href="https://priem.guap.ru"><b>Поступающим</b></a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-small" href="/targets/studs">Обучающимся</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-small" href="/targets/sotrs">Сотрудникам</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-small" href="/targets/vips">Выпускникам</a></li>
+                    </ul>
+                    <div class="module-navquick">
+                        <ul class="header-first-section__list">
+                            <li class="dropdown">
+                                <a id="ddl01" title="Languages" data-bs-toggle="dropdown" role="button" aria-expanded="false" class=""><span>RU</span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://guap.ru/en/"><span>EN</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown dropdown-center" data-bs-offset="10,20">
+                                <a id="ddl02" title="Расписания" data-bs-toggle="dropdown" role="button"><i class="gi gi-schedule"></i></a>
+                                <ul class="header-first-section__list">
+                                    <li><a href="https://guap.ru/rasp">Расписание семестра</a></li>
+                                    <li><a href="https://guap.ru/rasp-exam">Расписание экзаменационной сессии</a></li>
+                                </ul>
+
+                            </li>
+                            <li><a href="https://pro.guap.ru" title="Личные кабинеты преподавателей и студентов"><i class="gi gi-user"></i></a>&nbsp;</li>
+                            <li>
+                                <a href="https://guap.ru/sveden/site" title="Информация для людей с ограниченными возможностями"><i class="fa fa-low-vision" style="font-size: 12.5pt;"></i> </a>
+                            </li>
+                            <li><a href="https://guap.ru/search" title="Поиск"><i class="fa fa-search" style="font-size: 12pt;"></i> </a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="header-first-section__toggle-container">
+            <button class="header-first-section__toggle-btn" id="toggleButton">
+                <span>Раскрыть меню</span>
+                <span class="header-first-section__arrow">▼</span>
+            </button>
+        </div>
         <div class="header-container">
             <div class="university-branding">
                 <div class="logo header-item">
                     <img class="logo-img" src="./img/paug.png"/>
                 </div>
-                <img class="logo-img header-item" src="./img/priority.png"/></div>
+                <a href="#"><img class="logo-img header-item" src="./img/priority.png"/></div></a>
             </div>
             <!-- User tools or search would go here -->
         </div>
@@ -35,7 +77,7 @@
     
     <!-- Main Page Content -->
     <div class="slide-out">
-        <img class="slide-out-image" src="./img/slide-out.png"/></div>
+        <img id="central-big-image" class="slide-out-image" src="./img/slide-out.png"/></div>
     <main class="main-container">
         <div class="page-content">
             <!-- Hero Banner -->
