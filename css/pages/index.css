@@ -1,0 +1,23 @@
+.second-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 20px; /* Space between each item */
+
+    height: 100%;    
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;    
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+.header-start {
+    min-width: 150px;
+}
+
+
+.header-end {
+    min-width: 150px;
+}

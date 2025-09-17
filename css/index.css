@@ -22,17 +22,20 @@ body {
 }
 
 .header-container {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
 
 .university-branding {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between; /* This is the key property */
+    width: 80%;
 }
 
 .logo {
@@ -49,7 +52,7 @@ body {
 }
 
 .logo-img {
-    height: 58px;
+    height: inherit;
 }
 
 .nav-container {
@@ -238,14 +241,5 @@ body {
         /* flex-direction: column; */
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-    
-    .header-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .university-branding {
-        margin-bottom: 15px;
     }
 }
