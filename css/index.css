@@ -240,6 +240,9 @@ body {
     .navbar {
         /* flex-direction: column; */
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .header-container {
+        padding: 0;
     }
 }
