@@ -6,9 +6,10 @@ import { useLanguageSwitchersOn } from './page/components/togglers/languageList.
 import { useToggleButton } from './page/components/togglers/useToggleButton.js';
 
 document.addEventListener('DOMContentLoaded', function() {
-    useModalOnAhrefs(); 
+    useModalOnAhrefs( ['language-dropdown__item', 'scan-qr-and-go', 'schoolboys-lnk', 'tg-link'] ); 
     useToggleButton();
-    useImageTransition('central-big-image', ['./img/slide-out/slide-out1.png',
+    useImageTransition('central-big-image', [
+        './img/slide-out/slide-out1.png',
         './img/slide-out/slide-out-2.jpg',
         './img/slide-out/slide-out-3.jpg',
         './img/slide-out/slide-out-4.jpg']);

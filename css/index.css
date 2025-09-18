@@ -48,6 +48,14 @@ body {
     padding: 0 20px;
 }
 
+.nav-wrapper .tg-link {
+    color: #ffd900;
+}
+
+.third-row {
+    grid-row: 3;
+}
+
 .navbar {
     display: flex;
     list-style-type: none;

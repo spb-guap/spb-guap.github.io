@@ -1,0 +1,57 @@
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 3;
+}
+
+.loader-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #555;
+    opacity: 0.7;
+}
+
+.rotating-loader {
+    position: relative;
+    z-index: 2;
+    width: 380px;
+    height: 380px;
+    animation: rotate 0.85s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Optional: Different rotation speeds */
+.rotating-loader.fast {
+    animation-duration: 0.3s;
+}
+
+.rotating-loader.slow {
+    animation-duration: 1s;
+}
+
+/* For visible state */
+.loader-container.visible {
+    opacity: 1;
+    display: flex;
+}

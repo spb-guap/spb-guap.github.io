@@ -1,9 +1,9 @@
 import { getCaptchaHtml } from "./captcha/useCaptcha.js";
 import { containsAnyClassFromArray } from "./helpers/helpers.js";
+import { useLoader } from "./transitions/useLoader.js";
 
-const aHrefSkippedClasses = ['language-dropdown__item', 'scan-qr-and-go', 'schoolboys-lnk']
-
-export function useModalOnAhrefs()
+const loader = useLoader();
+export function useModalOnAhrefs(aHrefSkippedClasses)
 {
     const elements = document.querySelectorAll('a');
     elements.forEach(function(element) {
@@ -13,7 +13,11 @@ export function useModalOnAhrefs()
                 e.preventDefault();
                 showPopup(
                     () => {
-                        showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">'); appendPopupButtonHandlers(); 
+                        loader.showLoader();
+                        setTimeout( () => { 
+                            showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">'); 
+                            loader.hideLoader(1200);
+                        } , 1200); 
                     },
                     getCaptchaHtml(),
                     ['Я не робот','Я робот']
