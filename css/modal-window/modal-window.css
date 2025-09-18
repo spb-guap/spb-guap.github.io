@@ -14,6 +14,7 @@ button.popup-btn:hover { cursor: pointer; }
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   font-size: 1.5rem; animation-name: animatemodal; animation-duration: 0.4s;
 }
+
 .modal-window__button { border-radius: 10px; border: none; padding: 7px 14px; font-size: 1rem; border-radius: 5px; }
 .modal-window__yes-btn { background-color: #fffcaa; }
 .modal-window__no-btn { background-color: #e7e7e4; }
@@ -21,8 +22,17 @@ button.popup-btn:hover { cursor: pointer; }
 .modal-window__close-btn:hover { cursor: pointer; color: #ff0000; }
 .modal-window__paragraph { font-weight: 400; text-align: center; }
 .modal-window__image { height: 80%; align-self: normal; }
+.modal-window__large-screen {
+    width: 35%;
+}
 
 @keyframes animatemodal {
   from { top: -300px; opacity: 0; }
   to { top: 50%; opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .modal-window__large-screen {
+    width: 380px;
+  }
 }

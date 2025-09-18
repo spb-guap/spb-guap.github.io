@@ -22,7 +22,7 @@ export function useModalOnAhrefs()
 }
 
 // Exported
-export function showPopupWithImage(image) {
+export function showPopupWithImage(image, next = () => {}) {
     recreateWithImage(image);
     
     const modalBackground = document.getElementsByClassName('modal-window')[0];
@@ -30,7 +30,9 @@ export function showPopupWithImage(image) {
 
     modalBackground.addEventListener('click', function(e) {
         modalBackground.remove();
-    })
+    });
+    
+    next();
 }
 
 export function showPopup(event_handler, text, buttons) {
