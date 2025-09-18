@@ -1,7 +1,7 @@
 import { getCaptchaHtml } from "./captcha/useCaptcha.js";
 import { containsAnyClassFromArray } from "./helpers/helpers.js";
 
-const aHrefSkippedClasses = ['language-dropdown__item', 'scan-qr-and-go']
+const aHrefSkippedClasses = ['language-dropdown__item', 'scan-qr-and-go', 'schoolboys-lnk']
 
 export function useModalOnAhrefs()
 {
