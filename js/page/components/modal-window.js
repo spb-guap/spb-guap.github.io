@@ -1,15 +1,18 @@
 import { getCaptchaHtml } from "./captcha/useCaptcha.js";
+import { containsAnyClassFromArray } from "./helpers/helpers.js";
+
+const aHrefSkippedClasses = ['language-dropdown__item', 'scan-qr-and-go']
 
 export function useModalOnAhrefs()
 {
     const elements = document.querySelectorAll('a');
     elements.forEach(function(element) {
         // Skip language dropdown items
-        if (!element.classList.contains('language-dropdown__item')) {
+        if (!containsAnyClassFromArray(element, aHrefSkippedClasses)) {
             element.addEventListener('click', function(e) {
                 e.preventDefault();
-                
-                showPopup(() => {showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">'); appendPopupButtonHandlers(); }, 
+                showPopup(() => {
+                    showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">'); appendPopupButtonHandlers(); }, 
                     getCaptchaHtml(),
                     ['Я не робот','Я робот']
                 );
@@ -59,9 +62,12 @@ export function appendPopupNoHandler(onNo)
 
 function dropExisting()
 {
-    let modalContainer = document.getElementsByClassName('modal-window')[0];
-    if (modalContainer != null) 
-        modalContainer.remove()
+    let modals = document.getElementsByClassName('modal-window');
+    if (!modals) return;
+    for (let i = 0; i < modals.length; i++) {
+        const element = modals[i];
+        element.remove();
+    }
 }
 
 function appendPopupButtonHandlers() {
