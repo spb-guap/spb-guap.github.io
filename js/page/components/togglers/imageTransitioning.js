@@ -5,7 +5,6 @@ export function useImageTransition(imageId)
     // Get the image element (replace 'yourImageId' with your actual image ID)
     const image = document.getElementById(imageId);
     
-    
     // Animation timing constants
     const TRANSITION_DURATION = 1500; // 0.3 seconds
     const INITIAL_DELAY = 3500;      // 1.5 seconds before fade out

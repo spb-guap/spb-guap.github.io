@@ -25,6 +25,9 @@ button.popup-btn:hover { cursor: pointer; }
 .modal-window__large-screen {
     width: 35%;
 }
+.modal-window__standard-screen {
+    width: 28%;
+}
 
 @keyframes animatemodal {
   from { top: -300px; opacity: 0; }
@@ -34,5 +37,8 @@ button.popup-btn:hover { cursor: pointer; }
 @media (max-width: 768px) {
   .modal-window__large-screen {
     width: 380px;
+  }
+  .modal-window__standard-screen {
+      width: 340px;;
   }
 }

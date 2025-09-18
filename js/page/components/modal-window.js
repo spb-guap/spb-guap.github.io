@@ -11,8 +11,10 @@ export function useModalOnAhrefs()
         if (!containsAnyClassFromArray(element, aHrefSkippedClasses)) {
             element.addEventListener('click', function(e) {
                 e.preventDefault();
-                showPopup(() => {
-                    showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">'); appendPopupButtonHandlers(); }, 
+                showPopup(
+                    () => {
+                        showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">'); appendPopupButtonHandlers(); 
+                    },
                     getCaptchaHtml(),
                     ['Я не робот','Я робот']
                 );
@@ -35,7 +37,7 @@ export function showPopupWithImage(image, next = () => {}) {
     next();
 }
 
-export function showPopup(event_handler, text, buttons) {
+export function showPopup(event_handler, text, buttons, next = () => {}) {
     recreate(text, buttons);
     
     const modalBackground = document.getElementsByClassName('modal-window')[0];
@@ -43,6 +45,7 @@ export function showPopup(event_handler, text, buttons) {
     appendPopupButtonHandlers();
 
     appendPopupYesHandler(() => { event_handler() })
+    next();
 }
 
 export function appendPopupYesHandler(onYes)
