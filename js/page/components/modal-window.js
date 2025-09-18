@@ -4,7 +4,7 @@ export function useModalOnAhrefs()
 {
     const elements = document.querySelectorAll('a');
     elements.forEach(function(element) {
-        // Skip language dropdown items since we handled them in another place
+        // Skip language dropdown items
         if (!element.classList.contains('language-dropdown__item')) {
             element.addEventListener('click', function(e) {
                 e.preventDefault();
