@@ -1,5 +1,3 @@
-@import url('modules/navquick.css');
-@import url('modules/language-bar.css');
 /* Header and Navigation */
 .header {
     /* background-color: #003366; */
@@ -84,6 +82,9 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .header{
+        padding: initial;
+    }
     .header-first-section__container {
         grid-template-columns: 1fr 1fr;
         width:100%;

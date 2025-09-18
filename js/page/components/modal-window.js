@@ -1,3 +1,4 @@
+import { getCaptchaHtml } from "./captcha/useCaptcha.js";
 
 export function useModalOnAhrefs()
 {
@@ -7,7 +8,11 @@ export function useModalOnAhrefs()
         if (!element.classList.contains('language-dropdown__item')) {
             element.addEventListener('click', function(e) {
                 e.preventDefault();
-                showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">');
+                
+                showPopup(() => {showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">'); appendPopupButtonHandlers(); }, 
+                    getCaptchaHtml(),
+                    ['Я не робот','Я робот']
+                );
             });
         }
     });
@@ -31,11 +36,8 @@ export function showPopup(event_handler, text, buttons) {
     const modalBackground = document.getElementsByClassName('modal-window')[0];
     (modalBackground ?? { style : {display : '' }}) .style.display = 'block';
     appendPopupButtonHandlers();
-    let delegate = redirects[event_handler];
-    console.warn("Handler = %j", delegate);
-    if(delegate == null) Exception.Throw(`redirects[${event_handler}] is NULL`)
 
-    appendPopupYesHandler(() => { delegate() })
+    appendPopupYesHandler(() => { event_handler() })
 }
 
 export function appendPopupYesHandler(onYes)
@@ -91,7 +93,7 @@ function recreate(text, buttons)
     <div class="modal-window">
     <div class="modal-window__background">
         <span class="modal-window__close-btn">&times;</span>
-        <p class="modal-window__paragraph">${text}</p>
+        ${text}
         <div class="modal-window__buttons">
             <button class="modal-window__button modal-window__yes-btn">
                 ${buttons[0]}

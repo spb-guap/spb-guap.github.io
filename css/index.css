@@ -1,5 +1,5 @@
-@import url('./modal-window/modal-window.css');
-@import url('./pages/index.css');
+@import url('modal-window/modal-window.css');
+@import url('pages/index.css');
 
 * {
     margin: 0;
@@ -82,15 +82,6 @@ body {
 .page-content {
     flex: 1;
     min-width: 300px;
-}
-
-.hero-banner {
-    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 64, 128, 0.8)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23004080"/><text x="50%" y="50%" font-family="Arial" font-size="10" fill="%23ffffff" text-anchor="middle" dominant-baseline="middle">Campus Image</text></svg>');
-    background-size: cover;
-    color: white;
-    padding: 3rem;
-    border-radius: 8px;
-    margin-bottom: 20px;
 }
 
 .content-section {
@@ -214,6 +205,8 @@ body {
 @media (max-width: 768px) {
     .main-container {
         /* flex-direction: column; */
+        padding: 4px;
+        gap: 4px
     }
     
     .sidebar {
@@ -227,5 +220,15 @@ body {
     }
     .header-container {
         padding: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 0.5rem;
+        display: block;
+        transition: background-color 0.3s;
     }
 }
