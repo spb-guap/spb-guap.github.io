@@ -17,6 +17,9 @@ function showLoader() {
         `;
         document.body.insertBefore(loaderElement, document.body.firstChild);
         loader = loaderElement;
+        
+        // Force reflow to ensure initial state is rendered
+        void loader.offsetWidth;
     }
     
     // Show with transition
