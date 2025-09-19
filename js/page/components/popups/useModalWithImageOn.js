@@ -3,7 +3,7 @@ import { useLoader } from "../transitions/useLoader.js";
 
 const loader = useLoader();
 
-export function useModalWithImageOn(elementQuery, imagePath)
+export function useModalWithImageOn(elementQuery, imagePath, delay = 1700)
 {
     const element = document.querySelector(elementQuery);
     element.addEventListener('click', (e) => {
@@ -15,7 +15,7 @@ export function useModalWithImageOn(elementQuery, imagePath)
                     document.querySelector('.modal-window__background')?.classList.add('modal-window__large-scale');
                 }
             );
-            loader.hideLoader(1700);
-        } , 1700); 
+            loader.hideLoader(delay);
+        } , delay); 
     });
 }

@@ -102,6 +102,15 @@ function appendPopupButtonHandlers() {
 function recreate(text, buttons)
 {
     dropExisting();
+    let buttonsText = buttons == null ? "" :
+    `<div class="modal-window__buttons">
+        <button class="modal-window__button modal-window__yes-btn">
+            ${buttons[0]}
+        </button>
+        <button class="modal-window__button modal-window__no-btn">
+            ${buttons[1]}
+        </button>
+    </div>`;
     document.getElementsByTagName('body')[0].insertAdjacentHTML("afterbegin",
     `
     <!-- Modal Background and Modal -->
@@ -109,14 +118,7 @@ function recreate(text, buttons)
     <div class="modal-window__background">
         <span class="modal-window__close-btn">&times;</span>
         ${text}
-        <div class="modal-window__buttons">
-            <button class="modal-window__button modal-window__yes-btn">
-                ${buttons[0]}
-            </button>
-            <button class="modal-window__button modal-window__no-btn">
-                ${buttons[1]}
-            </button>
-        </div>
+        ${buttonsText}
     </div>
     </div>
     `);

@@ -4,7 +4,7 @@ export function useLanguageSwitchersOn(className)
     const languageItems = document.querySelectorAll(className);
     languageItems.forEach(function(item) {
         item.addEventListener('click', function(e) {
-            e.preventDefault();
+            //e.preventDefault();
             
             // Toggle active/inactive classes for all language items
             languageItems.forEach(function(langItem) {
