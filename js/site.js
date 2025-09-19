@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         './img/slide-out/slide-out1.png',
         './img/slide-out/slide-out-2.jpg',
         './img/slide-out/slide-out-3.jpg',
-        './img/slide-out/slide-out-4.jpg']);
+        './img/slide-out/slide-out-4.jpg'], 0, true);
     useLanguageSwitchersOn('.language-dropdown__item');
     useModalRegistratura('.scan-qr-and-go');    
     useModalRegistratura('.go-win-yourself');

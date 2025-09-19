@@ -41,7 +41,6 @@ button.popup-btn:hover { cursor: pointer; }
 /* Responsive Design */
 @media (max-width: 768px) {
   .modal-window__background {
-    left: 44%;
     min-width: 300px;
   }
   .modal-window__standard-scale {
