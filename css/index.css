@@ -1,4 +1,4 @@
-@import url('modal-window/modal-window.css');
+@import url('modal-window/index.css');
 @import url('pages/index.css');
 
 * {
@@ -40,6 +40,10 @@ body {
 
 .nav-container {
     background-color: #004080;
+}
+
+.text-centered {
+    text-align: center;
 }
 
 .nav-wrapper {

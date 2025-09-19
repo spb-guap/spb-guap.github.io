@@ -1,0 +1,10 @@
+.modal-content__paragraph {
+    width: 90%;
+    font-size: small;
+}
+
+.modal-content__image {
+    width: -webkit-fill-available;
+    min-width: 20%;
+    max-width: 90%;
+}

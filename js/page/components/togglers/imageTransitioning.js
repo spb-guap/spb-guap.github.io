@@ -2,7 +2,6 @@
 
 export function useImageTransition(imageId, imageNameArray = [], addedDelay, shouldReverse = true)
 {
-    // Get the image element (replace 'yourImageId' with your actual image ID)
     const image = document.getElementById(imageId);
     
     // Animation timing constants
