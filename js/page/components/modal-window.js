@@ -24,7 +24,7 @@ export function useModalOnAhrefs(aHrefSkippedClasses)
                             showPopup(
                                 () => showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">'), 
                                 '<img class="modal-window__image" src="./img/rofls/captcha-peach.png">',
-                                ['Пропустить', 'Не пропускать']
+                                ['Не пропускать', 'Пропустить']
                             )
                         }
                         switcher = !switcher;   
