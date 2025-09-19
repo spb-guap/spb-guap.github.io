@@ -2,11 +2,11 @@ import { getCaptchaHtml } from "./captcha/useCaptcha.js";
 import { containsAnyClassFromArray } from "./helpers/helpers.js";
 import { useLoader } from "./transitions/useLoader.js";
 
+let switcher = false;
 const loader = useLoader();
 export function useModalOnAhrefs(aHrefSkippedClasses)
 {
     const elements = document.querySelectorAll('a');
-    let showFirstPopup = () => {};
     elements.forEach(function(element) {
         // Skip language dropdown items
         if (!containsAnyClassFromArray(element, aHrefSkippedClasses)) {
@@ -14,11 +14,20 @@ export function useModalOnAhrefs(aHrefSkippedClasses)
                 e.preventDefault();
                 showPopup(
                     () => {
-                        showPopup(
-                            () => showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">'),
-                            `<p style="text-align: center; margin-bottom: 20px; color: #333;">Это точно, ты не врёшь?<p/>`,
-                            ['Не вру', 'Вру']
-                        )
+                        if (switcher === true) {
+                            showPopup(
+                                () =>  showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">'),
+                                `<p style="text-align: center; margin-bottom: 20px; color: #333;">Это точно, ты не врёшь?<p/>`,
+                                ['Не вру', 'Вру']
+                            )
+                        } else {
+                            showPopup(
+                                () => showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">'), 
+                                '<img class="modal-window__image" src="./img/rofls/captcha-peach.png">',
+                                ['Пропустить', 'Не пропускать']
+                            )
+                        }
+                        switcher = !switcher;   
                     },
                     getCaptchaHtml(),
                     ['Я не робот','Я робот']
