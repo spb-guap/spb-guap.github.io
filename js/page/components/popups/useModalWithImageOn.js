@@ -12,7 +12,7 @@ export function useModalWithImageOn(elementQuery, imagePath)
         setTimeout( () => { 
             showPopupWithImage(`<img class="modal-window__image" src="${imagePath}">`, 
                 () => {
-                    document.querySelector('.modal-window__background')?.classList.add('modal-window__large-screen');
+                    document.querySelector('.modal-window__background')?.classList.add('modal-window__large-scale');
                 }
             );
             loader.hideLoader(1700);

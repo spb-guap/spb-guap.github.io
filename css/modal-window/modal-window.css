@@ -9,10 +9,11 @@ button.popup-btn:hover { cursor: pointer; }
 }
 .modal-window__background {
   background-color: #fff; position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%, -50%); width: 300px; padding: 10px 20px;
+  transform: translate(-50%, -50%); width: 38vh; padding: 10px 20px;
   border-radius: 5px; display: flex; flex-direction: column; align-items: center;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   font-size: 1.5rem; animation-name: animatemodal; animation-duration: 0.4s;
+  min-width: 380px;
 }
 
 .modal-window__button { border-radius: 10px; border: none; padding: 7px 14px; font-size: 1rem; border-radius: 5px; }
@@ -22,23 +23,17 @@ button.popup-btn:hover { cursor: pointer; }
 .modal-window__close-btn:hover { cursor: pointer; color: #ff0000; }
 .modal-window__paragraph { font-weight: 400; text-align: center; }
 .modal-window__image { height: 80%; align-self: normal; }
-.modal-window__large-screen {
-    width: 35%;
+.modal-window__standard-scale {
+    width: 65vh;
 }
-.modal-window__standard-screen {
-    width: 28%;
+.modal-window__large-scale {
+    width: 70vh;
+}
+.modal-window__huge-scale {
+    width: 80vh;
 }
 
 @keyframes animatemodal {
   from { top: -300px; opacity: 0; }
   to { top: 50%; opacity: 1; }
-}
-
-@media (max-width: 768px) {
-  .modal-window__large-screen {
-    width: 380px;
-  }
-  .modal-window__standard-screen {
-      width: 340px;;
-  }
 }

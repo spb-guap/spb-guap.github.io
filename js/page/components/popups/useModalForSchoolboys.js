@@ -20,7 +20,7 @@ export function useModalForSchoolboys(elementQuery)
                 </div>`,
                 ['Ок', 'Отмена'], 
                 () => {
-                    document.querySelector('.modal-window__background')?.classList.add('modal-window__standard-screen');
+                    document.querySelector('.modal-window__background')?.classList.add('modal-window__standard-scale');
                 },
             );
             loader.hideLoader(1200);

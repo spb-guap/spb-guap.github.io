@@ -12,7 +12,7 @@ export function useModalRegistratura(elementQuery)
         setTimeout( () => { 
             showPopupWithImage('<img class="modal-window__image" src="./img/rofls/registratura.jpg">', 
                 () => {
-                    document.querySelector('.modal-window__background')?.classList.add('modal-window__large-screen');
+                    document.querySelector('.modal-window__background')?.classList.add('modal-window__huge-scale');
                 }
             );
             loader.hideLoader(1700);
