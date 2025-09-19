@@ -38,4 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
     useModalWithImageOn('.nav-lng-korean', './img/rofls/kim-chen-un.webp', 900);
     useModalWithImageOn('.nav-lng-japan', './img/rofls/kojima.jpg', 900);
     useModalWithImageOn('.nav-lng-china', './img/rofls/lgd-team.jpg', 900);
+
+    useImageTransition('logo-main-img', [
+        './img/paug.png',
+        './img/paug2.png',
+        './img/paug3.png',
+        './img/paug4.png'], 2500, false);
 });

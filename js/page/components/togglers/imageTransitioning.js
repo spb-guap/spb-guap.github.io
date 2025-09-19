@@ -1,6 +1,6 @@
 
 
-export function useImageTransition(imageId, imageNameArray = [])
+export function useImageTransition(imageId, imageNameArray = [], addedDelay, shouldReverse = true)
 {
     // Get the image element (replace 'yourImageId' with your actual image ID)
     const image = document.getElementById(imageId);
@@ -25,21 +25,23 @@ export function useImageTransition(imageId, imageNameArray = [])
             image.style.transform = 'scaleX(1)';
             
             // Phase 1: Initial visible state
-            await delay(INITIAL_DELAY);
+            await delay(INITIAL_DELAY + addedDelay);
             
-            // Phase 2: Fade out
-            image.style.opacity = '0';
-            await delay(TRANSITION_DURATION);
-            
-            if(i == 0)
-            {
-                // Phase 3: Flip and fade in
-                image.style.transform = 'scaleX(-1)';
-                image.style.opacity = '1';
+            if (shouldReverse) { // Phase 2: reverse
+                // Phase 3: Fade out
+                image.style.opacity = '0';
                 await delay(TRANSITION_DURATION);
                 
-                // Phase 4: Visible with flip applied
-                await delay(VISIBLE_DURATION);
+                if (i == 0)
+                {
+                    // Phase 4: Flip and fade in
+                    image.style.transform = 'scaleX(-1)';
+                    image.style.opacity = '1';
+                    await delay(TRANSITION_DURATION);
+                    
+                    // Phase 5: Visible with flip applied
+                    await delay(VISIBLE_DURATION);
+                }
             }
 
             if (++i >= imageNameArray.length) {
