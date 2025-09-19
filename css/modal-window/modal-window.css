@@ -40,16 +40,19 @@ button.popup-btn:hover { cursor: pointer; }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-.modal-window__standard-scale {
-    min-width: 360px;
-    width: 45vh;
-}
-.modal-window__large-scale {
-    min-width: 370px;
-    width: 60vh;
-}
-.modal-window__huge-scale {
-    min-width: 375px;
-    width: 60vh;
-}
+  .modal-window__background {
+    left: 44%;
+  }
+  .modal-window__standard-scale {
+      width: 280px;
+      min-width: 10%;
+  }
+  .modal-window__large-scale {
+      width: 340px;
+      min-width: 10%;
+  }
+  .modal-window__huge-scale {
+      width: 280px;
+      min-width: 10%;
+  }
 }

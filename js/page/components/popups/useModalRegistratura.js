@@ -15,7 +15,7 @@ export function useModalRegistratura(elementQuery)
                     document.querySelector('.modal-window__background')?.classList.add('modal-window__huge-scale');
                 }
             );
-            loader.hideLoader(1700);
-        } , 1700); 
+            loader.hideLoader(1000);
+        } , 1000); 
     });
 }

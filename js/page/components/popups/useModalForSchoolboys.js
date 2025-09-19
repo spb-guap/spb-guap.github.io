@@ -23,7 +23,7 @@ export function useModalForSchoolboys(elementQuery)
                     document.querySelector('.modal-window__background')?.classList.add('modal-window__standard-scale');
                 },
             );
-            loader.hideLoader(1200);
-        } , 1200); 
+            loader.hideLoader(1000);
+        } , 1000); 
     });
 }

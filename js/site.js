@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'schoolboys-lnk',
         'university-lnk',
         'education-lnk',
-        'tg-link']
+        'tg-link',
+        'go-win-yourself']
     ); 
     useToggleButton();
     useImageTransition('central-big-image', [
