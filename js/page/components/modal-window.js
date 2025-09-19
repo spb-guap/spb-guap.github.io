@@ -6,6 +6,7 @@ const loader = useLoader();
 export function useModalOnAhrefs(aHrefSkippedClasses)
 {
     const elements = document.querySelectorAll('a');
+    let showFirstPopup = () => {};
     elements.forEach(function(element) {
         // Skip language dropdown items
         if (!containsAnyClassFromArray(element, aHrefSkippedClasses)) {
@@ -13,11 +14,11 @@ export function useModalOnAhrefs(aHrefSkippedClasses)
                 e.preventDefault();
                 showPopup(
                     () => {
-                        loader.showLoader();
-                        setTimeout( () => { 
-                            showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">'); 
-                            loader.hideLoader(1200);
-                        } , 1200); 
+                        showPopup(
+                            () => showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">'),
+                            `<p style="text-align: center; margin-bottom: 20px; color: #333;">Это точно, ты не врёшь?<p/>`,
+                            ['Не вру', 'Вру']
+                        )
                     },
                     getCaptchaHtml(),
                     ['Я не робот','Я робот']

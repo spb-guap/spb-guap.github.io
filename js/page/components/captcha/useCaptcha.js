@@ -3,7 +3,7 @@ export function getCaptchaHtml()
 {
     const captchaHtml = `<style>
         .captcha-container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); text-align: center; width: 300px; }
-        .captcha-title { margin-bottom: 20px; color: #333; }
+        .captcha-title { color: #333; }
         .buttons-container { display: flex; justify-content: space-between; margin-bottom: 20px; }
         .captcha-btn { padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; transition: all 0.3s; width: 48%; }
         .robot-btn { background-color: #ff4757; color: white; }
@@ -15,7 +15,7 @@ export function getCaptchaHtml()
         .denied { color: #ff4757; }
         .hidden { display: none; }
     </style><div class="captcha-container">
-        <h4 class="captcha-title">Подтвердите, что вы не робот</h2>
+        <h4 class="captcha-title">Подтвердите, что вы не робот</h4>
         <div class="popup-robot-result" id="popup-robot-result">
         </div>
     </div>`;
