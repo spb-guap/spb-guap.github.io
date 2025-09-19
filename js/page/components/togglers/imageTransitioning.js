@@ -44,10 +44,12 @@ export function useImageTransition(imageId, imageNameArray = [], addedDelay, sho
                 }
             }
 
-            if (++i >= imageNameArray.length) {
-                i = 0;
-            };
-            image.src = `${imageNameArray[i]}`;
+            if (imageNameArray?.length) {
+                if ((++i >= imageNameArray.length)) {
+                    i = 0;
+                };
+                image.src = `${imageNameArray[i]}`;
+            }
         }
     }
     

@@ -45,4 +45,5 @@ document.addEventListener('DOMContentLoaded', function() {
         './img/paug2.png',
         './img/paug3.png',
         './img/paug4.png'], 2500, false);
+    useImageTransition('priority-img', null, 0, true);
 });
