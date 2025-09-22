@@ -26,19 +26,18 @@ function switchOnPopup_Level1(isReversed) {
     if ( switcher <= 1 ) {
         showPopup(
             () => {
-                switchOnPopup_Level2();
+                //switcher = (switcher < 0) ? END_INDEX : switcher;
+                switchOnPopup_Level2(isReversed);
             },
             getCaptchaHtml(),
             ['Я не робот','Я робот']
         );
     } else {
-        switchOnPopup_Level2();
+        switchOnPopup_Level2(isReversed);
     }
-
-    switcher = (switcher >= MAX_OPTIONS || switcher < 0) ? (isReversed ? END_INDEX : 0) : (isReversed ? switcher - 1 : switcher + 1);
 }
 
-function switchOnPopup_Level2()
+function switchOnPopup_Level2(isReversed)
 {
     switch (switcher) {
         case 0: {    
@@ -70,6 +69,11 @@ function switchOnPopup_Level2()
                 ['С лабами', 'Без лаб']
             );
         } break;
+    }
+    
+    switcher = isReversed ? switcher - 1 : switcher + 1;
+    if (switcher >= END_INDEX || (switcher) < 0) {
+        switcher = (isReversed ? END_INDEX : 0);
     }
 }
 
