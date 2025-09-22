@@ -15,6 +15,7 @@ export function renderRasp()
     useModalWithImageOn('.btn-new-search', '/img/animated/u-piter.webp');
 
     document.querySelector('.rasp-fourth-section__today').innerHTML=getTodayString();
+    document.querySelector('.rasp-fourth-section__text2').innerHTML = getAcademicWeekParity().symbol;
 }
 
 function getTodayString() {
@@ -28,4 +29,32 @@ function getTodayString() {
     const year = today.getFullYear();
     
     return `Сегодня <nobr>${dayOfWeek}, ${day} ${month} ${year} г.</nobr><br>`;
+}
+
+function getAcademicWeekParity() {
+    const today = new Date();
+    const currentYear = today.getFullYear();
+    
+    // Начало учебного года (1 сентября)
+    let academicYearStart = new Date(currentYear, 8, 1); // 8 = сентябрь
+    
+    // Если сейчас до сентября, берем предыдущий учебный год
+    if (today < academicYearStart) {
+        academicYearStart = new Date(currentYear - 1, 8, 1);
+    }
+    
+    // Разница в неделях
+    const diffTime = today - academicYearStart;
+    const diffWeeks = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 7));
+    
+    const isOddWeek = (diffWeeks + 1) % 2 !== 0; // +1 потому что первая неделя = №1
+    
+    return {
+        isOdd: isOddWeek,
+        parity: isOddWeek ? 'нечетная' : 'четная',
+        weekNumber: diffWeeks + 1,
+        symbol: isOddWeek 
+            ? `<div style="color: red;>▲ ${diffWeeks + 1} верхняя (нечетная) неделя</div>` 
+            : `<div style="color: blue;">▼ ${diffWeeks + 1} нижняя (четная) неделя</div>`
+    };
 }
