@@ -1,0 +1,19 @@
+.rasp-header-first-section
+{
+    background-color: #eee;
+}
+
+.rasp-header-first-section__container {
+    justify-content: space-between;
+    padding-right: .75rem;
+    padding-left: .75rem;
+    justify-self: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%; 
+    display: flex;
+}
+
+.rasp-logo-a {
+    height: inherit;
+}

@@ -16,14 +16,14 @@ export function useModalOnAhrefs(aHrefSkippedClasses)
                     () => {
                         if (switcher === true) {
                             showPopup(
-                                () =>  showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">'),
+                                () =>  showPopupWithImage('<img class="modal-window__image" src="/img/500.jpg">'),
                                 `<p style="text-align: center; margin-bottom: 20px; color: #333;">Это точно, ты не врёшь?<p/>`,
                                 ['Не вру', 'Вру']
                             )
                         } else {
                             showPopup(
-                                () => showPopupWithImage('<img class="modal-window__image" src="./img/500.jpg">'), 
-                                '<img class="modal-window__image" src="./img/rofls/captcha-peach.jpg">',
+                                () => showPopupWithImage('<img class="modal-window__image" src="/img/500.jpg">'), 
+                                '<img class="modal-window__image" src="/img/rofls/captcha-peach.jpg">',
                                 ['Не пропускать', 'Пропустить']
                             )
                         }

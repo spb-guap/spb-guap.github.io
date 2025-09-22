@@ -1,0 +1,26 @@
+.sidenav {
+    z-index: 1; height: 100%; width: 140px; position: fixed; top: 0px; background-color: #111111bf;
+    overflow-x: hidden; transition: all 0.5s; padding-top: 60px;
+}
+
+.sidenav p {
+    padding: 8px 8px 8px 32px; text-decoration: none; font-size: 25px; color: #d3d3d3; display: block; transition: all 0.3s;
+}
+
+.sidenav p:hover {
+     color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute; top: 0; right: 10px; font-size: 36px; margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    
+    .sidenav a {
+        font-size: 18px;
+    }
+}

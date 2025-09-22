@@ -4,7 +4,7 @@ export function useNavigationLnkRemapping()
 {
     useModalWithContentOn(
         '.lnk-abiture',
-        ` <img class="modal-content__image" src="./img/content/index/abiture.jpg"/>
+        ` <img class="modal-content__image" src="/img/content/index/abiture.jpg"/>
         <p class="modal-content__paragraph">🔍 Топ вопросов от абитуриентов — собрали всё в одном месте!Бик<br>
         1️⃣ Если я в рейтинге 17 из 32, что это значит? У меня есть шанс?
         — Нету.<br>

@@ -13,7 +13,7 @@ function showLoader() {
         loaderElement.className = 'loader-container';
         loaderElement.innerHTML = `
             <div class="loader-backdrop"></div>
-            <img src="./img/loaders/loader.png" class="rotating-loader" alt="Loading...">
+            <img src="/img/loaders/loader.png" class="rotating-loader" alt="Loading...">
         `;
         document.body.insertBefore(loaderElement, document.body.firstChild);
         loader = loaderElement;
