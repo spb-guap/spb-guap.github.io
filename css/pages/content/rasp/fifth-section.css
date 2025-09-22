@@ -1,0 +1,27 @@
+.rasp-fifth-section {
+    width: 70%;
+    justify-self: anchor-center;
+    display: flex;
+    gap: 45px;
+}
+
+.rasp-fifth-section__button {
+    width: 15rem;
+    padding: .375rem .75rem;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #e72b70;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #e72b70;
+    border-radius: .25rem;
+    background-color: transparent;
+    transition: color .15s 
+        ease-in-out, background-color .15s 
+        ease-in-out, border-color .15s 
+        ease-in-out, box-shadow .15s 
+        ease-in-out;
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LMS GUAP Website</title>
+    <title>Guap Rasp Website</title>
     <link rel="stylesheet" href="./../css/index.css" />
     <link rel="icon" type="image/x-icon" href="./../img/ico/favicon.ico">
 </head>
@@ -12,26 +12,124 @@
         <div class="rasp-header-first-section">
             <div class="rasp-header-first-section__container">
                 <div class="logo header-item">
-                    <a class="rasp-logo-a" href="/"><img class="logo-img" id="logo-main-img" src="/../img/content/rasp/logo.jpg"/></a>
+                    <a class="rasp-logo-a" href="/"><img class="logo-img" id="logo-main-img" src="/img/content/rasp/logo.jpg"/></a>
                 </div>
                 <nav class="header-first-section__navbar">
-                    <ul class="nav nav-quick ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="/sitemap"><i class="bi-diagram-3"></i></a></li>
-                        <li class="nav-item"><a class="nav-link" href="/search"><i class="bi-search"></i></a></li>
+                    <ul class="rasp-header__shortcut-container">
+                        <li class="rasp-header__shortcut-item"><a class="nav-link" href="/sitemap"><img src="/img/content/symbols/structure.png"></a></li>
+                        <li class="rasp-header__shortcut-item"><a class="nav-link" href="/search">🔍</a></li>
                     </ul>
-                    <div class="module-navquick">
-                        <ul class="header-first-section__list" style="padding-left: 5px;">
-                            <li class="dropdown language-bar__container">
-                                <a class="dropdown-active language-dropdown__item nav-lng-china" href="#"><span>中国人</span></a>
-                                <a class="dropdown-inactive language-dropdown__item nav-lng-japan" href="#"> <span>日本人</span></a>
-                                <a class="dropdown-inactive language-dropdown__item nav-lng-korean" href="#"> <span>한국인</span></a>
-                            </li>
-                        </ul>
-                    </div>
                 </nav>
             </div>
         </div>
     </header>
+    <div class="rasp-content-background"></div>
+    <div class="rasp-content-wrapper">
+        <main class="rasp-section-main" role="main">
+            <div class="rasp-section-main__container">
+                <nav id="breadcrumb" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Гaysh..t</a></li>
+                        <li class="breadcrumb-item"> / </li>
+                        <li class="breadcrumb-item active opacity-50" aria-current="page">
+                            Расписание занятий
+                        </li>
+                    </ol>
+                </nav>
+
+                <h1 class="rasp-section-main__schedule-title">Расписание занятий</h1>
+            </div>
+        </main>
+        <div class="rasp-third-section">Вид: <b>разжиженный</b> | <a href="#">компостный</a></div>
+        <div class="rasp-fourth-section">
+            <div class="rasp-fourth-section__flex-box">
+                <p class="rasp-fourth-section__text">
+                    Осенний семестр
+                    2025/26&nbsp;учебного&nbsp;года<br>
+                    <small>(сборка: 2025-09-02)</small>
+                </p>
+            </div>
+            <div class="col-12 col-md-6 d-print-none">
+                <div class="rasp-fourth-section__week-box">
+                    Сегодня <nobr>понедельник, 22 сентября 2025 г.</nobr><br>
+                    <span class="rasp-fourth-section__text2">▼&nbsp;4&nbsp;нижняя (четная) неделя</span>
+                </div>
+            </div>
+        </div>
+        <div class="rasp-fifth-section">
+            <button class="rasp-fifth-section__button" type="button">Новый поиск</button>
+            <div id="result" class="opacity-50">Фильтр: гр. 6666м (токсичных оккультистов)</div>
+        </div>
+
+        <div class="rasp-sixth-section">
+            <!-- ПН -->
+            <h4 class="rasp-sixth-section__day-of-week">Понедельник</h4>
+            <div class="rasp-sixth-section__lesson-number">2 пара <small>(11:10—12:40)</small></div>
+            <div class="rasp-sixth-section__lesson-container">
+                <div class="rasp-week-down" title="нижняя (четная) неделя">▼</div>
+                <div>
+                    <div class="fs-6 lh-sm opacity-50">Практическое занятие </div>
+                    <div class="lead lh-sm">Стратегическое управление нелинейными динамическими сценариями в условиях детерминированного стохастического хаоса</div>
+                    <div class="opacity-75">
+                        ауд. <a href="?ad=25">13-16&nbsp;(Б. Морская 67)</a>
+                        —&nbsp;<a href="?ch=17">Кафедра 5</a><br>
+                        преп:&nbsp;<a class="" href="?pr=38620">Преподаватель: Том Хиддлстон, доцент, канд. искусствоведения, доцент.</a>.&nbsp;&nbsp;
+                        гр:&nbsp;<a class="" href="?gr=6797">Группа резистентных штаммов корпоративных вирусов.</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- СР -->
+            <h4 class="rasp-sixth-section__day-of-week">Среда</h4>
+            <div class="rasp-sixth-section__lesson-number">1 пара <small class="opacity-50">(9:30—11:00)</small></div>
+            <div class="rasp-sixth-section__lesson-container">
+                <div class="rasp-week-up" title="верхняя (нечетная) неделя">▲</div>
+                <div>
+                    <div class="fs-6 lh-sm opacity-50">Лекция</div>
+                    <div class="lead lh-sm">Трансдисциплинарные основы проектирования интерфейсов для гибридных сентиентных систем с распределенным искусственным интеллектом</div>
+                    <div class="opacity-75">
+                        ауд. <a href="?ad=26">52-43&nbsp;(Б. Морская 67)</a>
+                        —&nbsp;<a href="?ch=3">Кафедра 14</a><br>
+                        преп:&nbsp;<a class="" href="?pr=38622">Кейт Бланшетт, старший преподаватель.</a>.&nbsp;&nbsp;
+                        гр:&nbsp;<a class="" href="?gr=6797">Группа энтропийных менеджеров с негэнтропийным мышлением.</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ПТ -->
+            <h4 class="rasp-sixth-section__day-of-week">Пятница</h4>
+            <div class="rasp-sixth-section__lesson-number">4 пара <small class="opacity-50">(15:10—16:40)</small></div>
+            <div class="rasp-sixth-section__lesson-container">
+                <div class="rasp-week-down" title="нижняя (четная) неделя">▼</div>
+                <div>
+                    <div class="fs-6 lh-sm opacity-50">Практическое занятие </div>
+                    <div class="lead lh-sm">Прикладная биомеханика и кинезиология высших форм телесного выражения в контексте оптимизации психофизиологических потенциалов (Физкультура, описанная как наука для супергероев)</div>
+                    <div class="opacity-75">
+                        ауд. <a href="?ad=1">спортзал&nbsp;(Ленсовета 14)</a>
+                        —&nbsp;<a href="?ch=1">Кафедра 64</a><br>
+                        
+                        гр:&nbsp;<a class="" href="?gr=6797">Когорта Некротарханов</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Суббота -->
+            <h4 class="rasp-sixth-section__day-of-week">Суббота</h4>
+            <div class="rasp-sixth-section__lesson-number">4 пара <small class="opacity-50">(15:10—16:40)</small></div>
+            <div class="rasp-sixth-section__lesson-container">
+                <div class="rasp-week-up" title="верхняя (нечетная) неделя">▲</div>
+                <div>
+                    <div class="fs-6 lh-sm opacity-50">Лекция</div>
+                    <div class="lead lh-sm">Семиотический анализ и деконструкция идентичности бренда в гиперреалистичных пространствах симулированного гостеприимства</div>
+                    <div class="opacity-75">
+                        ауд. <a href="?ad=158">с-36&nbsp;(Гастелло 15)</a>
+                        —&nbsp;<a href="?ch=21">Кафедра 62</a><br>
+                        преп:&nbsp;<a class="" href="?pr=3043">Хавьер Бардем, доцент, канд. культурологии, доцент.</a>.&nbsp;&nbsp;
+                        гр:&nbsp;<a class="" href="?gr=6333">6227к</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
      <script src="./../js/site.js" type="module"></script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+.rasp-fourth-section {
+    width: 70%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-self: anchor-center;
+}
+
+.rasp-fourth-section__flex-box {
+    flex: none;
+    width: 50%;
+}
+
+.rasp-fourth-section__text1 {
+    color: rgba(25, 135, 84, 0) !important;
+}
+.rasp-fourth-section__text2 {
+    color: blue;
+}
+
+.rasp-fourth-section__week-box {
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    color: #626262;
+    border: 1px solid #cbcbcb;
+    border-radius: .375rem;
+    position: relative;
+}

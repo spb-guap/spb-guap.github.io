@@ -1,0 +1,43 @@
+
+.rasp-sixth-section {
+    width: 70%;
+    justify-self: anchor-center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rasp-sixth-section__day-of-week {
+    max-width: 80rem;
+    color: rgba(220,53,69, 1);
+    padding-top: .5rem ;
+    padding-bottom: .5rem ;
+    margin-top: 3rem;
+    border-width: 2px; 
+    border-color: rgba(220,53,69, 1);
+    border-bottom: 1px solid #dc3545; 
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.rasp-sixth-section__lesson-number {
+    color: rgba(220,53,69, 1);
+}
+
+.rasp-sixth-section__lesson-container {
+    gap: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    display: flex;
+}
+
+.rasp-week-down {
+    font-size: 1.4rem;
+    color: blue;
+}
+
+.rasp-week-up {
+    font-size: 1.4rem;
+    color: red;
+}

@@ -1,5 +1,5 @@
 import { useNavigationLnkRemapping, useNavigationRemappingOnTelegramRedirect } from "../../features/useNavigationRemapping.js";
-import { useModalOnAhrefs } from "../components/modal-window.js";
+import { useModalOnAhrefsExceptFor } from "../components/modal-window.js";
 import { useModalForSchoolboys } from "../components/popups/useModalForSchoolboys.js";
 import { useModalRegistratura } from "../components/popups/useModalRegistratura.js";
 import { useModalWithContentOn } from "../components/popups/useModalWithContentOn.js";
@@ -10,10 +10,10 @@ import { useToggleButton } from "../components/togglers/useToggleButton.js";
 
 export function renderIndex()
 {
-    useModalOnAhrefs( ['language-dropdown__item',
+    useModalOnAhrefsExceptFor( ['language-dropdown__item',
         'scan-qr-and-go', 'lnk-schoolboys', 'university-lnk',
         'education-lnk', 'tg-link', 'go-win-yourself', 'lnk-a-jobs', 'nav-rasp-lnk']
-    ); 
+    );
     useToggleButton();
     useImageTransition('central-big-image', [
         './img/slide-out/slide-out1.png', './img/slide-out/slide-out-2.jpg',
