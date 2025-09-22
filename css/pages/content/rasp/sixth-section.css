@@ -31,9 +31,15 @@
     padding-bottom: .5rem;
     display: flex;
 }
-    
+
 .rasp-sixth-section__lesson-type-text {
     opacity: .5
+}
+
+.rasp-sixth-section__lesson_title {
+    font-size: 1.4rem;
+	line-height: 1.25;
+	font-weight: 300;
 }
 
 .rasp-week-down {
