@@ -32,6 +32,10 @@
     display: flex;
 }
 
+.rasp-sixth-section__lesson-type-text {
+    opacity: .5
+}
+
 .rasp-week-down {
     font-size: 1.4rem;
     color: blue;
