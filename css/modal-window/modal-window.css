@@ -56,6 +56,7 @@ button.popup-btn:hover { cursor: pointer; }
 @media (max-width: 768px) {
   .modal-window__background {
     min-width: 300px;
+    max-height: 100%;
   }
   .modal-window__standard-scale {
       width: 280px;
@@ -66,7 +67,29 @@ button.popup-btn:hover { cursor: pointer; }
       min-width: 10%;
   }
   .modal-window__huge-scale {
-      width: 280px;
+      width: 320px;
       min-width: 10%;
+  }
+}
+
+@media screen and (max-height: 768px) and (orientation: landscape) {
+  .modal-window__background {
+    width: -webkit-fill-available;
+    flex-direction: row;
+    height: inherit;
+  }
+  .modal-window__horizontal-image {
+    width: inherit;
+  }
+  .modal-window__vertical-image {
+    height: inherit;
+  }
+  .modal-window__close-btn {
+    align-self: flex-start;
+  }
+  .modal-window__background.initial {
+    width: initial;
+    flex-direction: initial;
+    height: initial;
   }
 }

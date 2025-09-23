@@ -21,10 +21,3 @@ export function wrapImageStringIntoContainer(input)
 {
     return `<div class="modal-window__image-container">${input}</div>`;
 }
-
-export function addSeveralModalsWithContentOn(selectors = [], content)
-{
-    for (let selector of selectors) {
-        useModalWithContentOn(selector, content);
-    }
-}

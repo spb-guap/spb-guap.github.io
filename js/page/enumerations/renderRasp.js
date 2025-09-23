@@ -1,6 +1,6 @@
 import { createInteractiveGrid } from "../components/captcha/createInteractiveGridOn.js";
 import { showPopupWithImage, useModalOnAhrefsExceptFor } from "../components/modal-window.js";
-import { addSeveralModalsWithContentOn, useModalWithContentOn, wrapImageStringIntoContainer } from "../components/popups/useModalWithContentOn.js";
+import { useModalWithContentOn, wrapImageStringIntoContainer } from "../components/popups/useModalWithContentOn.js";
 import { useLoader } from "../components/transitions/useLoader.js"
 import { fillSubjectNames } from "./schedule-data/subject-filler.js";
 
@@ -9,9 +9,6 @@ const loader = useLoader();
 export function renderRasp()
 {
     useModalOnAhrefsExceptFor(['rasp-logo-a', 'gayshit-lnk'], true);
-    addSeveralModalsWithContentOn(['.rasp-logo-a', '.gayshit-lnk'], 
-        `<p>Переход в основной раздел: <p/><a class="rasp-logo-a" href="/">${window.location.origin}</a>`
-    );
     
     useModalWithContentOn('.btn-new-search',
         '<p class="modal-window__captcha-title">Select all images with 220 Ω resistors</p>' +

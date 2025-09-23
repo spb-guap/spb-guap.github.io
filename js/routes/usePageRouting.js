@@ -4,7 +4,7 @@ import { renderRasp } from "../page/enumerations/renderRasp.js";
 
 export function usePageRouting()
 {
-    switch(window.location.pathname)
+    switch (window.location.pathname)
     {
         case '/':
             renderIndex();

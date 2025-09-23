@@ -10,9 +10,14 @@
     width: 50%;
 }
 
-.rasp-fourth-section__text1 {
-    color: rgba(25, 135, 84, 0) !important;
+.rasp-fourth-section__period {
+    color: rgba(25, 135, 84, 1);
 }
+
+.rasp-fourth-section__text1 {
+    color: rgba(25, 135, 84, 0);
+}
+
 .rasp-fourth-section__text2 {
     color: blue;
 }
