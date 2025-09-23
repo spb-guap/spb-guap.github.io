@@ -1,5 +1,7 @@
+import { createInteractiveGrid } from "./captcha/createInteractiveGridOn.js";
 import { getCaptchaHtml } from "./captcha/useCaptcha.js";
 import { containsAnyClassFromArray } from "./helpers/helpers.js";
+import { wrapImageStringIntoContainer } from "./popups/useModalWithContentOn.js";
 import { useLoader } from "./transitions/useLoader.js";
 
 let switcher = 0;
@@ -43,15 +45,16 @@ function switchOnPopup_Level2(isReversed)
         case 0: {    
             showPopup(
                 () =>  showPopupWithImage('<img class="modal-window__image" src="/img/500.jpg">'),
-                `<p style="text-align: center; margin-bottom: 20px; color: #333;">Это точно, ты не врёшь?<p/>`,
+                `<p style="text-align: center; margin-bottom: 20px; color: #333;">Это точно, ты не врёшь?</p>`,
                 ['Не вру', 'Вру']
             );
         } break;
         case 1: {
             showPopup(
                 () => showPopupWithImage('<img class="modal-window__image" src="/img/500.jpg">'), 
-                '<img class="modal-window__image" src="/img/rofls/captcha-peach.jpg">',
-                ['Не пропускать', 'Пропустить']
+                wrapImageStringIntoContainer('<img class="modal-window__image-adjusted" src="/img/rofls/captcha-peach.jpg"/>'),
+                ['Не пропускать', 'Пропустить'],
+                () => setTimeout(() => createInteractiveGrid('.modal-window__image-adjusted', 3, 3), 250),
             );
         } break;
         case 2: {
@@ -98,13 +101,26 @@ export function showPopup(event_handler, text, buttons, next = () => {}) {
     (modalBackground ?? { style : {display : '' }}) .style.display = 'block';
     appendPopupButtonHandlers();
 
-    appendPopupYesHandler(() => { event_handler() })
+    if (buttons?.length)
+        appendPopupYesHandler(() => { event_handler() })
     next();
+    dropModalOnEsc();
+}
+
+let added = false;
+function dropModalOnEsc() {
+    if (added) return;
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape')
+            dropExisting();
+    });
+    added = true;
 }
 
 export function appendPopupYesHandler(onYes)
 {
     let yesBtn = document.getElementsByClassName('modal-window__yes-btn')[0];
+    if (!yesBtn ) { console.log("Error appending an action to absent yes button"); return; }
     yesBtn.addEventListener('click', function(e) {
         e.preventDefault();
         onYes(e);
@@ -136,6 +152,7 @@ function appendPopupButtonHandlers() {
 
     const array = [closeBtn, noBtn]
     array.forEach((b) => {
+        if (!b) return;
             b.addEventListener('click', function() {
                 modalBackground.style.display = 'none';
             })

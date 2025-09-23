@@ -23,6 +23,13 @@ button.popup-btn:hover { cursor: pointer; }
 .modal-window__close-btn:hover { cursor: pointer; color: #ff0000; }
 .modal-window__paragraph { font-weight: 400; text-align: center; }
 .modal-window__image { height: 80%; align-self: normal; }
+.modal-window__image-adjusted { align-self: normal; width: 100%; }
+.modal-window__image-container {
+    position: relative;
+    height: 80%;
+    align-self: normal;
+    width: -webkit-fill-available;
+}
 .modal-window__standard-scale {
     width: 65vh;
 }
@@ -31,6 +38,13 @@ button.popup-btn:hover { cursor: pointer; }
 }
 .modal-window__huge-scale {
     width: 80vh;
+}
+
+.modal-window__captcha-title {
+    background: #67a1ff;
+    color: white;
+    text-align: center;
+    width: 100%;
 }
 
 @keyframes animatemodal {

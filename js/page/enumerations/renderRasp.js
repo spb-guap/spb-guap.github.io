@@ -1,20 +1,26 @@
+import { createInteractiveGrid } from "../components/captcha/createInteractiveGridOn.js";
 import { showPopupWithImage, useModalOnAhrefsExceptFor } from "../components/modal-window.js";
-import { useModalWithContentOn } from "../components/popups/useModalWithContentOn.js";
-import { useModalWithImageOn } from "../components/popups/useModalWithImageOn.js";
+import { addSeveralModalsWithContentOn, useModalWithContentOn, wrapImageStringIntoContainer } from "../components/popups/useModalWithContentOn.js";
 import { useLoader } from "../components/transitions/useLoader.js"
 
 const loader = useLoader();
 
 export function renderRasp()
 {
-    useModalOnAhrefsExceptFor(['.rasp-logo-a'], true)
-    useModalWithContentOn(
-        '.rasp-logo-a', 
+    useModalOnAhrefsExceptFor(['rasp-logo-a', 'gayshit-lnk'], true);
+    addSeveralModalsWithContentOn(['.rasp-logo-a', '.gayshit-lnk'], 
         `<p>Переход в основной раздел: <p/><a class="rasp-logo-a" href="/">${window.location.origin}</a>`
     );
-    useModalWithImageOn('.btn-new-search', '/img/animated/u-piter.webp');
+    
+    useModalWithContentOn('.btn-new-search',
+        '<p class="modal-window__captcha-title">Select all images with 220 Ω resistors</p>' +
+        wrapImageStringIntoContainer('<img class="modal-window__image-adjusted" src="/img/rofls/220-resistors.jpg"/>'),
+        ['Далее', 'Пропустить'],
+        () => showPopupWithImage('<img class="modal-window__image" src="/img/animated/u-piter.webp"/>'),
+        () => createInteractiveGrid('.modal-window__image-adjusted', 4, 4)
+    );
 
-    document.querySelector('.rasp-fourth-section__today').innerHTML=getTodayString();
+    document.querySelector('.rasp-fourth-section__today').innerHTML = getTodayString();
     document.querySelector('.rasp-fourth-section__text2').innerHTML = getAcademicWeekParity().symbol;
 }
 
