@@ -244,4 +244,9 @@ body {
         display: block;
         transition: background-color 0.3s;
     }
+    
+    .nav-wrapper {
+        margin: 0 auto;
+        padding: 0 2px;
+    }
 }
