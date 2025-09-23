@@ -31,13 +31,13 @@ button.popup-btn:hover { cursor: pointer; }
     width: -webkit-fill-available;
 }
 .modal-window__standard-scale {
-    width: 65vh;
+    /* width: 65vh; */
 }
 .modal-window__large-scale {
-    width: 70vh;
+    /* width: 70vh; */
 }
 .modal-window__huge-scale {
-    width: 80vh;
+    /* width: 80vh; */
 }
 
 .modal-window__captcha-title {
@@ -53,7 +53,7 @@ button.popup-btn:hover { cursor: pointer; }
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-height: 900px) {
   .modal-window__background {
     min-width: 300px;
     max-height: 100%;
@@ -72,7 +72,7 @@ button.popup-btn:hover { cursor: pointer; }
   }
 }
 
-@media screen and (max-height: 768px) {
+@media (max-height: 768px) and (min-width: 900px) {
   .modal-window__background {
     width: -webkit-fill-available;
     flex-direction: row;
