@@ -37,7 +37,7 @@
 }
 
 .rasp-sixth-section__lesson_title {
-    font-size: 1.4rem;
+    font-size: 1.4rem;;
 	line-height: 1.25;
 	font-weight: 300;
 }
@@ -50,4 +50,10 @@
 .rasp-week-up {
     font-size: 1.4rem;
     color: red;
+}
+
+@media (max-width: 1024px) {
+    .rasp-sixth-section__lesson_title {
+        font-size: 1.1rem;;
+    }
 }
