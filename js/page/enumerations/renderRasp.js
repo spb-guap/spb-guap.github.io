@@ -2,6 +2,7 @@ import { createInteractiveGrid } from "../components/captcha/createInteractiveGr
 import { showPopupWithImage, useModalOnAhrefsExceptFor } from "../components/modal-window.js";
 import { addSeveralModalsWithContentOn, useModalWithContentOn, wrapImageStringIntoContainer } from "../components/popups/useModalWithContentOn.js";
 import { useLoader } from "../components/transitions/useLoader.js"
+import { fillSubjectNames } from "./schedule-data/subject-filler.js";
 
 const loader = useLoader();
 
@@ -22,6 +23,7 @@ export function renderRasp()
 
     document.querySelector('.rasp-fourth-section__today').innerHTML = getTodayString();
     document.querySelector('.rasp-fourth-section__text2').innerHTML = getAcademicWeekParity().symbol;
+    fillSubjectNames('.rasp-sixth-section__lesson_title');
 }
 
 function getTodayString() {
