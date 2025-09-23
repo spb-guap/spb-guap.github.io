@@ -72,24 +72,21 @@ button.popup-btn:hover { cursor: pointer; }
   }
 }
 
-@media screen and (max-height: 768px) and (orientation: landscape) {
+@media screen and (max-height: 768px) and (max-width: 1024px) {
   .modal-window__background {
     width: -webkit-fill-available;
     flex-direction: row;
-    height: inherit;
-  }
-  .modal-window__horizontal-image {
+    height: 100%;
     width: inherit;
   }
-  .modal-window__vertical-image {
-    height: inherit;
+  .modal-window__vertical-content {
+    height: -webkit-fill-available;
   }
+  .modal-window__image-adjusted { height: -webkit-fill-available; }
   .modal-window__close-btn {
     align-self: flex-start;
   }
-  .modal-window__background.initial {
+  .modal-window__horizontal-content {
     width: initial;
-    flex-direction: initial;
-    height: initial;
   }
 }

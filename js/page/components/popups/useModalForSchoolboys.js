@@ -13,11 +13,11 @@ export function useModalForSchoolboys(elementQuery)
         setTimeout( () => { 
             showPopup(
                 () => { showPopupWithImage(
-                    wrapImageStringIntoContainer(`<img class="modal-window__image modal-window__vertical-image" src="/img/500.jpg">`)
+                    wrapImageStringIntoContainer(`<img class="modal-window__image modal-window__vertical-content" src="/img/500.jpg">`)
                 )},
-                `<div style="width: 100%; display: flex; flex-direction: column;">
+                `<div class="modal-window__image-adjusted" style="width: 100%; display: flex; flex-direction: column;">
                     <a target="_blank" rel="me nofollow noopener noreferrer" href="https://GDZ.RU">ГДЗ: готовые домашние задания за 1-11 класс</a>
-                    <img src="/img/rofls/cock-kick.jpg">
+                    <img class="modal-window__image-adjusted" src="/img/rofls/cock-kick.jpg">
                 </div>`,
                 ['Ок', 'Отмена'], 
                 () => {

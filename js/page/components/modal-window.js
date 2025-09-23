@@ -32,7 +32,8 @@ function switchOnPopup_Level1(isReversed) {
                 switchOnPopup_Level2(isReversed);
             },
             getCaptchaHtml(),
-            ['Я не робот','Я робот']
+            ['Я не робот','Я робот'],
+                () => document.querySelector('.modal-window__background')?.classList.add('modal-window__vertical-content')
         );
     } else {
         switchOnPopup_Level2(isReversed);
@@ -44,14 +45,17 @@ function switchOnPopup_Level2(isReversed)
     switch (switcher) {
         case 0: {    
             showPopup(
-                () =>  showPopupWithImage('<img class="modal-window__image modal-window__vertical-image" src="/img/500.jpg">'),
+                () => showPopupWithImage('<img class="modal-window__image modal-window__vertical-content" src="/img/500.jpg">',
+                    () => document.querySelector('.modal-window__background')?.classList.add('modal-window__horizontal-content')),
                 `<p style="text-align: center; margin-bottom: 20px; color: #333;">Это точно, ты не врёшь?</p>`,
-                ['Не вру', 'Вру']
+                ['Не вру', 'Вру'],
+                    () => document.querySelector('.modal-window__background')?.classList.add('modal-window__vertical-content')
             );
         } break;
         case 1: {
             showPopup(
-                () => showPopupWithImage('<img class="modal-window__image modal-window__vertical-image" src="/img/500.jpg">'), 
+                () => showPopupWithImage('<img class="modal-window__image modal-window__vertical-content" src="/img/500.jpg">',
+                    () => document.querySelector('.modal-window__background')?.classList.add('modal-window__horizontal-content')),
                 wrapImageStringIntoContainer('<img class="modal-window__image-adjusted" src="/img/rofls/captcha-peach.jpg"/>'),
                 ['Не пропускать', 'Пропустить'],
                 () => setTimeout(() => createInteractiveGrid('.modal-window__image-adjusted', 3, 3), 250),
@@ -59,15 +63,17 @@ function switchOnPopup_Level2(isReversed)
         } break;
         case 2: {
             showPopup(
-                () => showPopupWithImage('<img class="modal-window__image modal-window__vertical-image" src="/img/500.jpg">'), 
+                () => showPopupWithImage('<img class="modal-window__image modal-window__vertical-content" src="/img/500.jpg">',
+                    () => document.querySelector('.modal-window__background')?.classList.add('modal-window__horizontal-content')),
                 '<img class="modal-window__image" src="/img/rofls/reestr.jpg">',
                 ['Не предоставлять', 'Предоставить'], 
-                () => document.querySelector('.modal-window__background')?.classList.add('modal-window__large-scale', 'initial')
+                () => document.querySelector('.modal-window__background')?.classList.add('modal-window__large-scale', 'modal-window__horizontal-content')
             );
         } break;
         case 3: {
             showPopup(
-                () => showPopupWithImage('<img class="modal-window__image modal-window__vertical-image" src="/img/500.jpg">'), 
+                () => showPopupWithImage('<img class="modal-window__image modal-window__vertical-content" src="/img/500.jpg">',
+                    () => document.querySelector('.modal-window__background')?.classList.add('modal-window__horizontal-content')),
                 '<p>Попався. Лабы где?</p><img class="modal-window__image" src="/img/rofls/no-labs.jpg">',
                 ['С лабами', 'Без лаб']
             );
