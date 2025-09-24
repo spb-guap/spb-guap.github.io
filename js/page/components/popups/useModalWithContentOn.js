@@ -14,6 +14,21 @@ export function useModalWithContentOn(elementQuery, content, buttons, yesHandler
     });
 }
 
+export function useModalsWithContentOnAllOf(elementQuery, content, buttons, yesHandler = () => { }, then = () => { })
+{
+    for (let element of document.querySelectorAll(elementQuery)) {
+        element.addEventListener('click', (e) => {
+            e.preventDefault();
+            showPopup(
+                yesHandler,
+                `${content}`,
+                buttons
+            );
+            then();
+        });
+    }
+}
+
 export function showModalWithContent(content, buttons, yesHandler = () => { }, noHandler = () => { })
 {
     showPopup(

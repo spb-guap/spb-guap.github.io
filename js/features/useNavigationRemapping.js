@@ -1,4 +1,4 @@
-import { useModalWithContentOn, wrapImageStringIntoContainer } from "../page/components/popups/useModalWithContentOn.js";
+import { useModalsWithContentOnAllOf, useModalWithContentOn, wrapImageStringIntoContainer } from "../page/components/popups/useModalWithContentOn.js";
 
 export function useNavigationLnkRemapping()
 {
@@ -20,16 +20,16 @@ export function useNavigationLnkRemapping()
 
 export function useNavigationRemappingOnTelegramRedirect()
 {
-    useModalWithContentOn('.tg-channel', 
+    useModalsWithContentOnAllOf('.tg-channel', 
         `<p class="text-centered">Собираешься перейти или не являешься тобой?<p/><a target="_blank" rel="me nofollow noopener noreferrer" href="https://t.me/spbguap">https://t.me/spbguap</a>`
     , ['        ', '        ']);
-    useModalWithContentOn('.tg-chat', 
+    useModalsWithContentOnAllOf('.tg-chat', 
         `<p class="text-centered">Собираешься перейти или не являешься тобой?<p/><a target="_blank" rel="me nofollow noopener noreferrer" href="https://t.me/spbguap_chat">https://t.me/spbguap_chat</a>`
     , ['        ', '        ']);
-    useModalWithContentOn('.tg-channel-sidebar', 
+    useModalsWithContentOnAllOf('.tg-channel-sidebar', 
         `<p class="text-centered">Собираешься перейти или не являешься тобой?<p/><a target="_blank" rel="me nofollow noopener noreferrer" href="https://t.me/spbguap">https://t.me/spbguap</a>`
     , ['        ', '        ']);
-    useModalWithContentOn('.tg-chat-sidebar', 
+    useModalsWithContentOnAllOf('.tg-chat-sidebar', 
         `<p class="text-centered">Собираешься перейти или не являешься тобой?<p/><a target="_blank" rel="me nofollow noopener noreferrer" href="https://t.me/spbguap_chat">https://t.me/spbguap_chat</a>`
     , ['        ', '        ']);
 }
