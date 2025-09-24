@@ -11,7 +11,7 @@ export function renderRasp()
     useModalOnAhrefsExceptFor(['rasp-logo-a', 'gayshit-lnk'], true);
     
     useModalWithContentOn('.btn-new-search',
-        '<p class="modal-window__captcha-title">Select all images with 220 Ω resistors</p>' +
+        '<p class="modal-window__captcha-title"> Выберите все фото с резисторами на 220 Ω </p>' +
             wrapImageStringIntoContainer('<img class="modal-window__image-adjusted" src="/img/rofls/220-resistors.jpg"/>'),
         ['Далее', 'Пропустить'],
         () => showPopupWithImage('<img class="modal-window__image" src="/img/animated/u-piter.webp"/>',
