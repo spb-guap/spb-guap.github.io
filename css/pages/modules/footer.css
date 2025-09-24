@@ -1,3 +1,7 @@
 .footer-section {
     list-style: none;
 }
+
+.footer-section .tg-link {
+    color: #ffd900;
+}
