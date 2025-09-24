@@ -1,0 +1,42 @@
+/* Scroll to Top Button Styles */
+.scroll-top-arrow__button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(211, 211, 211, 0.7); /* Light gray with transparency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.scroll-top-arrow__button--visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top-arrow__button:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-top-arrow__button:active {
+    transform: translateY(0);
+}
+
+.scroll-top-arrow__symbol {
+    color: white;
+    font-size: 32px; /* Slightly larger for bigger button */
+    font-weight: bold;
+    line-height: 1;
+}

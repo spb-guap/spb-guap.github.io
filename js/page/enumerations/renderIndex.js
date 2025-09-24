@@ -1,4 +1,4 @@
-import { useNavigationLnkRemapping, useNavigationRemappingOnTelegramRedirect } from "../../features/useNavigationRemapping.js";
+import { useNavigationLnkRemapping, useNavigationRemappingOnTelegramRedirect } from "../../features/navigation-remapping.js";
 import { useModalOnAhrefsExceptFor } from "../components/modal-window.js";
 import { useModalForSchoolboys } from "../components/popups/useModalForSchoolboys.js";
 import { useModalRegistratura } from "../components/popups/useModalRegistratura.js";
@@ -35,6 +35,6 @@ export function renderIndex()
         './img/paug3.png', './img/paug4.png', './img/paug5.png'], 3000, false);
     useImageTransition('priority-img', null, 0, true);
     useNavigationLnkRemapping();
-    
+
     useModalWithContentOn('.lnk-a-jobs', '<p class="text-centered">Эй парень, в приемку не хочешь устроиться?</p><img class="modal-content__image" src="/img/content/application-comission.jpg"/>')
 }

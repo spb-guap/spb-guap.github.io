@@ -1,4 +1,4 @@
-import { useNavigationRemappingOnTelegramRedirect } from "../../features/useNavigationRemapping.js";
+import { useNavigationRemappingOnTelegramRedirect } from "../../features/navigation-remapping.js";
 import { createInteractiveGrid } from "../components/captcha/createInteractiveGridOn.js";
 import { showPopupWithImage, useModalOnAhrefsExceptFor } from "../components/modal-window.js";
 import { showModalWithContent, useModalWithContentOn, wrapImageStringIntoContainer } from "../components/popups/useModalWithContentOn.js";

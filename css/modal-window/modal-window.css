@@ -16,6 +16,7 @@ button.popup-btn:hover { cursor: pointer; }
   min-width: 380px;
   max-width: 95%;
   max-height: 95%;
+  overflow: scroll;
 }
 
 .modal-window__button { border-radius: 10px; border: none; padding: 7px 14px; font-size: 1rem; border-radius: 5px; }
