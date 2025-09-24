@@ -8,7 +8,7 @@ const loader = useLoader();
 
 export function renderRasp()
 {
-    useModalOnAhrefsExceptFor(['rasp-logo-a', 'gayshit-lnk'], true);
+    useModalOnAhrefsExceptFor(['rasp-logo-a', 'gayshit-lnk', 'lnk-a-jobs'], true);
     
     useModalWithContentOn('.btn-new-search',
         '<p class="modal-window__captcha-title"> Выберите все фото с резисторами на 220 Ω </p>' +
@@ -33,6 +33,8 @@ export function renderRasp()
             () => { showPopupWithImage(wrapImageStringIntoContainer('<img class="modal-window__image-adjusted" src="/img/rofls/reestr.jpg"/>')) }
         )
     , 350 );
+    
+    useModalWithContentOn('.lnk-a-jobs', '<p class="text-centered">Эй парень, в приемку не хочешь устроиться?</p><img class="modal-content__image" src="/img/content/application-comission.jpg"/>')
 }
 
 function getTodayString() {
