@@ -12,13 +12,12 @@ export function renderRasp()
     
     useModalWithContentOn('.btn-new-search',
         '<p class="modal-window__captcha-title">Select all images with 220 Ω resistors</p>' +
-        wrapImageStringIntoContainer('<img class="modal-window__image-adjusted" src="/img/rofls/220-resistors.jpg"/>'),
+            wrapImageStringIntoContainer('<img class="modal-window__image-adjusted" src="/img/rofls/220-resistors.jpg"/>'),
         ['Далее', 'Пропустить'],
         () => showPopupWithImage('<img class="modal-window__image" src="/img/animated/u-piter.webp"/>',
             () => document.querySelector('.modal-window__background')?.classList.add('modal-window__horizontal-content')),
         () => {
             createInteractiveGrid('.modal-window__image-adjusted', 4, 4);
-            // document.querySelector('.modal-window__background')?.classList.add('modal-window__horizontal-content');
         }
     );
 
