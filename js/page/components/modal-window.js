@@ -28,7 +28,6 @@ function switchOnPopup_Level1(isReversed) {
     if ( switcher <= 1 ) {
         showPopup(
             () => {
-                //switcher = (switcher < 0) ? END_INDEX : switcher;
                 switchOnPopup_Level2(isReversed);
             },
             getCaptchaHtml(),
@@ -188,8 +187,7 @@ function recreate(text, buttons)
         </button>
     </div>`;
     document.getElementsByTagName('body')[0].insertAdjacentHTML("afterbegin",
-    `
-    <!-- Modal Background and Modal -->
+    `<!-- Modal Background and Modal -->
     <div class="modal-window">
     <div class="modal-window__background">
         <span class="modal-window__close-btn">&times;</span>
@@ -204,8 +202,7 @@ function recreateWithImage(image)
 {
     dropExisting();
     document.getElementsByTagName('body')[0].insertAdjacentHTML("afterbegin",
-    `
-    <!-- Modal Background and Modal -->
+    `<!-- Modal Background and Modal -->
     <div class="modal-window">
     <div class="modal-window__background">
         <span class="modal-window__close-btn">&times;</span>
