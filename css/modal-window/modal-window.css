@@ -54,19 +54,8 @@ button.popup-btn:hover { cursor: pointer; }
   to { top: 50%; opacity: 1; }
 }
 
-
-/* Ultra-Small-Mobile */
-@media (max-height: 899px) and (max-width: 599px) {
-  .modal-window__background {
-    height: 80%;
-    width: 80%;
-    max-height: -webkit-fill-available;
-  }
-  .modal-window__image-adjusted { height: -webkit-fill-available; max-height: initial; }
-}
-
 /* Mobile*/
-@media (max-width: 698px) and (min-height: 760px) {
+@media ((max-width: 698px) and (min-height: 760px)) or ((max-width: 697px) and (max-height: 759px)) {
   .modal-window__background {
     width: 100%;
     max-height: 100%;
