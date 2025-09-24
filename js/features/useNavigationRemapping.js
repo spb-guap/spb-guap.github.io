@@ -16,8 +16,6 @@ export function useNavigationLnkRemapping()
         — А ничего, идёшь работаешь на стройку в Узбекистане.<br>
         spb-guap.github.io — это про выбор. Твой выбор! 🏫</p>`
     );
-    
-    document.querySelector('.modal-window__background')?.classList.add('modal-window__huge-scale');
 }
 
 export function useNavigationRemappingOnTelegramRedirect()

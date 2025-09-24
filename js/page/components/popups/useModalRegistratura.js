@@ -10,11 +10,7 @@ export function useModalRegistratura(elementQuery)
         e.preventDefault();
         loader.showLoader();
         setTimeout( () => { 
-            showPopupWithImage('<img class="modal-window__image" src="/img/rofls/registratura.jpg">',
-                () => {
-                    document.querySelector('.modal-window__background')?.classList.add('modal-window__huge-scale', 'modal-window__horizontal-content');
-                }
-            );
+            showPopupWithImage('<img class="modal-window__image" src="/img/rofls/registratura.jpg">');
             loader.hideLoader(1000);
         } , 1000); 
     });

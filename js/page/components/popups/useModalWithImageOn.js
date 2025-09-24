@@ -10,11 +10,7 @@ export function useModalWithImageOn(elementQuery, imagePath, delay = 1700)
         e.preventDefault();
         loader.showLoader();
         setTimeout( () => { 
-            showPopupWithImage(`<img class="modal-window__image" src="${imagePath}">`, 
-                () => {
-                    document.querySelector('.modal-window__background')?.classList.add('modal-window__large-scale');
-                }
-            );
+            showPopupWithImage(`<img class="modal-window__image" src="${imagePath}">`);
             loader.hideLoader(delay);
         } , delay); 
     });

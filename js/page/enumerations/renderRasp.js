@@ -1,6 +1,6 @@
 import { createInteractiveGrid } from "../components/captcha/createInteractiveGridOn.js";
 import { showPopupWithImage, useModalOnAhrefsExceptFor } from "../components/modal-window.js";
-import { useModalWithContentOn, wrapImageStringIntoContainer } from "../components/popups/useModalWithContentOn.js";
+import { showModalWithContent, useModalWithContentOn, wrapImageStringIntoContainer } from "../components/popups/useModalWithContentOn.js";
 import { useLoader } from "../components/transitions/useLoader.js"
 import { fillSubjectNames } from "./schedule-data/subject-filler.js";
 
@@ -25,6 +25,15 @@ export function renderRasp()
     document.querySelector('.rasp-fourth-section__today').innerHTML = getTodayString();
     document.querySelector('.rasp-fourth-section__text2').innerHTML = getAcademicWeekParity().symbol;
     fillSubjectNames('.rasp-sixth-section__lesson_title');
+    
+    setTimeout(
+        showModalWithContent(
+            wrapImageStringIntoContainer('<img class="modal-window__image-adjusted" src="/img/rofls/buy-diploma.jpg"/>'),
+            ['Сам(а) напишу', 'Купить'],
+            () => {},
+            () => { showPopupWithImage(wrapImageStringIntoContainer('<img class="modal-window__image-adjusted" src="/img/rofls/reestr.jpg"/>')) }
+        )
+    , 350 );
 }
 
 function getTodayString() {

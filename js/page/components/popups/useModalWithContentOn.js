@@ -8,16 +8,26 @@ export function useModalWithContentOn(elementQuery, content, buttons, yesHandler
         showPopup(
             yesHandler,
             `${content}`,
-            buttons,
-            () => {
-                document.querySelector('.modal-window__background')?.classList.add('modal-window__large-scale');
-            }
+            buttons
         );
         then();
     });
 }
 
+export function showModalWithContent(content, buttons, yesHandler = () => { }, noHandler = () => { })
+{
+    showPopup(
+        yesHandler,
+        `${content}`,
+        buttons,
+        () => {  },
+        () => { noHandler() }
+    );;
+}
+
 export function wrapImageStringIntoContainer(input)
 {
-    return `<div class="modal-window__image-container">${input}</div>`;
+    if ( input.indexOf('modal-window__image-container' < 0) )
+        return `<div class="modal-window__image-container">${input}</div>`;
+    return input;
 }

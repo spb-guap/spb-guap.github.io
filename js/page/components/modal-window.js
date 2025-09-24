@@ -100,15 +100,18 @@ export function showPopupWithImage(image, next = () => {}) {
     next();
 }
 
-export function showPopup(event_handler, text, buttons, next = () => {}) {
+export function showPopup(event_handler, text, buttons, next = () => {}, noHandler = () => {}) {
     recreate(text, buttons);
     
     const modalBackground = document.getElementsByClassName('modal-window')[0];
     (modalBackground ?? { style : {display : '' }}) .style.display = 'block';
     appendPopupButtonHandlers();
 
-    if (buttons?.length)
-        appendPopupYesHandler(() => { event_handler() })
+    if (buttons?.length) {
+        appendPopupYesHandler(() => { event_handler() });
+        if (buttons?.length > 1)
+            appendPopupNoHandler(noHandler);
+    }
     next();
     dropModalOnEsc();
 }
@@ -206,7 +209,7 @@ function recreateWithImage(image)
     <div class="modal-window">
     <div class="modal-window__background">
         <span class="modal-window__close-btn">&times;</span>
-        ${image}
+        ${wrapImageStringIntoContainer(image)}
     </div>
     </div>
     `);
