@@ -1,13 +1,13 @@
 
 var _iterator = 0;
-const _imageTransitionDictionary = {};
+const _imageSet = {};
 
 function showNextImageOf(image, imageId) {
-    if (_imageTransitionDictionary[imageId]?.length) {
-        if (++_iterator >= _imageTransitionDictionary[imageId].length)
+    if (_imageSet[imageId]?.length) {
+        if (++_iterator >= _imageSet[imageId].length)
             _iterator = 0;
 
-        image.src = `${(_imageTransitionDictionary[imageId])[_iterator]}`;
+        image.src = `${(_imageSet[imageId])[_iterator]}`;
     }
 }
 
@@ -17,7 +17,7 @@ function delay(ms) {
 
 export async function useImageTransition(imageId, imageNameArray = [], addedDelay, shouldReverse = true)
 {
-    _imageTransitionDictionary[imageId] = [...(imageNameArray ?? [])];
+    _imageSet[imageId] = [...(imageNameArray ?? [])];
     let image = document.getElementById(imageId);
     
     // Animation timing constants
