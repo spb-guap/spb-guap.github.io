@@ -31,8 +31,8 @@ export function renderIndex()
     useModalWithImageOn('.nav-lng-japan', './img/rofls/kojima.jpg', 900);
     useModalWithImageOn('.nav-lng-china', './img/rofls/lgd-team.jpg', 900);
     useImageTransition('logo-main-img', [
-        './img/paug.jpg', './img/paug2.png',
-        './img/paug3.png', './img/paug4.png', './img/paug5.png'], 3000, false);
+        './img/paug.jpg', './img/paug2.png', './img/paug3.png',
+        './img/paug4.png', './img/paug5.png', './img/paug1.png'], 3000, false);
     useImageTransition('priority-img', null, 0, true);
     useNavigationLnkRemapping();
 
