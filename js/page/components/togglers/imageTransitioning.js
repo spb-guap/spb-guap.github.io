@@ -11,7 +11,11 @@ function showNextImageOf(image, imageId) {
     }
 }
 
-export function useImageTransition(imageId, imageNameArray = [], addedDelay, shouldReverse = true)
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+export async function useImageTransition(imageId, imageNameArray = [], addedDelay, shouldReverse = true)
 {
     _imageTransitionDictionary[imageId] = [...(imageNameArray ?? [])];
     let image = document.getElementById(imageId);
@@ -26,40 +30,32 @@ export function useImageTransition(imageId, imageNameArray = [], addedDelay, sho
     image.addEventListener('click', () => { 
         showNextImageOf(image, imageId);
     });
-
-    function delay(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
     
-    async function animateImage() {
-        while (true) {
-            // Reset to initial state - visible, normal orientation
-            image.style.opacity = '1';
-            image.style.transform = 'scaleX(1)';
+    while (true) {
+        // Reset to initial state - visible, normal orientation
+        image.style.opacity = '1';
+        image.style.transform = 'scaleX(1)';
+        
+        // Phase 1: Initial visible state
+        await delay(INITIAL_DELAY + addedDelay);
+        
+        if (shouldReverse) { // Phase 2: reverse
+            // Phase 3: Fade out
+            image.style.opacity = '0';
+            await delay(TRANSITION_DURATION);
             
-            // Phase 1: Initial visible state
-            await delay(INITIAL_DELAY + addedDelay);
-            
-            if (shouldReverse) { // Phase 2: reverse
-                // Phase 3: Fade out
-                image.style.opacity = '0';
+            if (_iterator == 0)
+            {
+                // Phase 4: Flip and fade in
+                image.style.transform = 'scaleX(-1)';
+                image.style.opacity = '1';
                 await delay(TRANSITION_DURATION);
                 
-                if (_iterator == 0)
-                {
-                    // Phase 4: Flip and fade in
-                    image.style.transform = 'scaleX(-1)';
-                    image.style.opacity = '1';
-                    await delay(TRANSITION_DURATION);
-                    
-                    // Phase 5: Visible with flip applied
-                    await delay(VISIBLE_DURATION);
-                }
+                // Phase 5: Visible with flip applied
+                await delay(VISIBLE_DURATION);
             }
-
-            showNextImageOf(image, imageId);
         }
+
+        showNextImageOf(image, imageId);
     }
-    
-    animateImage();
 }
