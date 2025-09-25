@@ -1,8 +1,20 @@
 
+var _iterator = 0;
+const _imageTransitionDictionary = {};
+
+function showNextImageOf(image, imageId) {
+    if (_imageTransitionDictionary[imageId]?.length) {
+        if (++_iterator >= _imageTransitionDictionary[imageId].length)
+            _iterator = 0;
+
+        image.src = `${(_imageTransitionDictionary[imageId])[_iterator]}`;
+    }
+}
 
 export function useImageTransition(imageId, imageNameArray = [], addedDelay, shouldReverse = true)
 {
-    const image = document.getElementById(imageId);
+    _imageTransitionDictionary[imageId] = [...(imageNameArray ?? [])];
+    let image = document.getElementById(imageId);
     
     // Animation timing constants
     const TRANSITION_DURATION = 1500; // 0.3 seconds
@@ -11,13 +23,15 @@ export function useImageTransition(imageId, imageNameArray = [], addedDelay, sho
     
     // Set transition properties
     image.style.transition = `all ${TRANSITION_DURATION}ms ease`;
-    
+    image.addEventListener('click', () => { 
+        showNextImageOf(image, imageId);
+    });
+
     function delay(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
     
     async function animateImage() {
-        let i = 0;
         while (true) {
             // Reset to initial state - visible, normal orientation
             image.style.opacity = '1';
@@ -31,7 +45,7 @@ export function useImageTransition(imageId, imageNameArray = [], addedDelay, sho
                 image.style.opacity = '0';
                 await delay(TRANSITION_DURATION);
                 
-                if (i == 0)
+                if (_iterator == 0)
                 {
                     // Phase 4: Flip and fade in
                     image.style.transform = 'scaleX(-1)';
@@ -43,12 +57,7 @@ export function useImageTransition(imageId, imageNameArray = [], addedDelay, sho
                 }
             }
 
-            if (imageNameArray?.length) {
-                if ((++i >= imageNameArray.length)) {
-                    i = 0;
-                };
-                image.src = `${imageNameArray[i]}`;
-            }
+            showNextImageOf(image, imageId);
         }
     }
     
