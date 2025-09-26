@@ -2,12 +2,12 @@
 var _iterator = 0;
 const _imageSet = {};
 
-function showNextImageOf(image, imageId) {
-    if (_imageSet[imageId]?.length) {
-        if (++_iterator >= _imageSet[imageId].length)
+function showNextImageOf(image, imageSelector) {
+    if (_imageSet[imageSelector]?.length) {
+        if (++_iterator >= _imageSet[imageSelector].length)
             _iterator = 0;
 
-        image.src = `${(_imageSet[imageId])[_iterator]}`;
+        image.src = `${(_imageSet[imageSelector])[_iterator]}`;
     }
 }
 
@@ -15,10 +15,10 @@ function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-export async function useImageTransition(imageId, imageNameArray = [], addedDelay, shouldReverse = true)
+export async function useImageTransition(imageSelector, imageNameArray = [], addedDelay, shouldReverse = true)
 {
-    _imageSet[imageId] = [...(imageNameArray ?? [])];
-    let image = document.getElementById(imageId);
+    _imageSet[imageSelector] = [...(imageNameArray ?? [])];
+    let image = document.querySelector(imageSelector);
     
     // Animation timing constants
     const TRANSITION_DURATION = 1500; // 0.3 seconds
@@ -28,7 +28,7 @@ export async function useImageTransition(imageId, imageNameArray = [], addedDela
     // Set transition properties
     image.style.transition = `all ${TRANSITION_DURATION}ms ease`;
     image.addEventListener('click', () => { 
-        showNextImageOf(image, imageId);
+        showNextImageOf(image, imageSelector);
     });
     
     while (true) {
@@ -56,6 +56,6 @@ export async function useImageTransition(imageId, imageNameArray = [], addedDela
             }
         }
 
-        showNextImageOf(image, imageId);
+        showNextImageOf(image, imageSelector);
     }
 }

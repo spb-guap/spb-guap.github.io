@@ -15,7 +15,7 @@ export function renderIndex()
         'education-lnk', 'tg-link', 'go-win-yourself', 'lnk-a-jobs', 'nav-rasp-lnk', 'news-lnk-rasp'
     ] );
     useToggleButton();
-    useImageTransition('central-big-image', [
+    useImageTransition('#central-big-image', [
         './img/slide-out/slide-out1.png', './img/slide-out/slide-out-2.jpg', './img/slide-out/slide-out-2-1.jpg',
         './img/slide-out/slide-out-3.jpg', './img/slide-out/slide-out-4.jpg', './img/slide-out/slide-out-5.jpg'], 0, true);
     useLanguageSwitchersOn('.language-dropdown__item');
@@ -30,10 +30,10 @@ export function renderIndex()
     useModalWithImageOn('.nav-lng-korean', './img/rofls/kim-chen-un.webp', 900);
     useModalWithImageOn('.nav-lng-japan', './img/rofls/kojima.jpg', 900);
     useModalWithImageOn('.nav-lng-china', './img/rofls/lgd-team.jpg', 900);
-    useImageTransition('logo-main-img', [
-        './img/paug.jpg', './img/paug2.png', './img/paug3.png',
+    useImageTransition('#logo-right-img', [
+        './img/gayshit-right.jpg', './img/paug2.png', './img/paug3.png',
         './img/paug4.png', './img/paug5.png', './img/paug1.png'], 3000, false);
-    useImageTransition('priority-img', null, 0, true);
+    useImageTransition('#priority-img', null, 0, true);
     useNavigationLnkRemapping();
 
     useModalWithContentOn('.lnk-a-jobs', '<p class="text-centered">Эй парень, в приемку не хочешь устроиться?</p><img class="modal-content__image" src="/img/content/application-comission.jpg"/>')
