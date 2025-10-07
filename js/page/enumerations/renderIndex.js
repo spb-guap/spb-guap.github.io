@@ -21,7 +21,7 @@ export function renderIndex()
     useLanguageSwitchersOn('.language-dropdown__item');
     useModalRegistratura('.scan-qr-and-go');    
     useModalRegistratura('.go-win-yourself');
-    useModalWithImageOn('.university-lnk', './img/content/data-satanism.png');
+    useModalWithImageOn('.university-lnk', './img/content/data-satanism.jpg');
     useModalRegistratura('.education-lnk');
     useModalForSchoolboys('.lnk-schoolboys');
 
