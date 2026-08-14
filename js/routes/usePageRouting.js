@@ -1,6 +1,7 @@
 import { renderIndex } from "../page/enumerations/renderIndex.js";
 import { renderLms } from "../page/enumerations/renderLms.js";
 import { renderRasp } from "../page/enumerations/renderRasp.js";
+import { renderPro } from "../page/enumerations/renderPro.js";
 
 export function usePageRouting()
 {
@@ -14,6 +15,9 @@ export function usePageRouting()
             break;
         case '/rasp/':
             renderRasp();
+            break;
+        case '/pro/':
+            renderPro();
             break;
         default:
             break;

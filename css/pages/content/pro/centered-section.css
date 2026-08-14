@@ -1,0 +1,58 @@
+/* ---------- SECTION (container) ---------- */
+.centered-section {
+  position: relative;        /* anchor for blue-line absolute positioning */
+  width: 100%;
+  max-width: 1200px;        /* optional max-width, but container is full-width */
+  margin: 2rem auto;        /* center horizontally, add vertical spacing */
+  padding: 1rem 1rem;       /* give space inside, so images have room */
+  background: #f8f9fb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+
+  /* flex layout to align images vertically centered */
+  display: flex;
+  align-items: center;      /* vertical centering for both images */
+  justify-content: space-between; /* left / right distribution */
+  min-height: 20px;        /* ensure enough height for vertical centering */
+  height: 3rem;
+}
+
+/* ----- IMAGES (common) ----- */
+.section-image {
+  display: block;           /* removes extra inline spacing */
+  /* height is set via inline 'height' attribute, but we keep it as "own height" */
+  /* we do NOT override height here, so the image keeps its native aspect ratio */
+  /* but we want them to be vertically centered — flex align-items handles that */
+  object-fit: contain;      /* preserve aspect ratio, but not strictly needed */
+  max-width: 45%;           /* prevent overflow, but keep own height */
+  flex-shrink: 0;           /* prevent shrinking if container is narrow */
+}
+
+/* ----- THIN BLUE LINE AT BOTTOM ----- */
+.blue-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;              /* thin line */
+  background-color: #2563eb; /* vivid blue */
+  border-radius: 0 0 12px 12px; /* match container's rounded bottom */
+  /* if you prefer a pure line without rounded corners, remove border-radius */
+}
+
+/* small screens: stack or adjust spacing */
+@media (max-width: 600px) {
+  .second-section {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+  .section-image {
+    max-width: 80%;
+    height: auto;           /* keep own height but allow resize */
+  }
+  .left-image, .right-image {
+    /* both centered when wrapped */
+  }
+}

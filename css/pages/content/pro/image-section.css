@@ -1,0 +1,38 @@
+/* ----- main section (container) ----- */
+.image-section {
+  position: relative;              /* anchor for blue-line */
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;               /* center horizontally + top/bottom space */
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: center;         /* horizontally center the wrapper */
+  align-items: center;             /* vertically center the wrapper (if height allows) */
+  min-height: 400px;               /* give some height so vertical centering is visible */
+}
+
+/* ----- IMAGE WRAPPER (the key class) ----- */
+.image-wrapper {
+  display: flex;
+  justify-content: center;         /* horizontally center the image inside wrapper */
+  align-items: center;             /* vertically center inside wrapper (if needed) */
+  width: 100%;                     /* full width of parent, so we can center its child */
+  max-width: 600px;               /* optional: limit wrapper width for better layout */
+  /* you can also add padding, background, border, etc. to style the wrapper */
+  /* background: #f8fafc;  (uncomment to see wrapper) */
+  /* border-radius: 12px; */
+}
+
+/* ----- the image itself ----- */
+.centered-image {
+  display: block;
+  width: 100%;                     /* makes image responsive inside wrapper */
+  height: auto;                    /* maintain aspect ratio */
+  max-width: 100%;                 /* never overflow wrapper */
+  border-radius: 8px;             /* subtle rounding (optional) */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  object-fit: cover;              /* ensures nice crop if needed, but with auto height it's fine */
+}

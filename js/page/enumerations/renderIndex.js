@@ -12,7 +12,7 @@ export function renderIndex()
 {
     useModalOnAhrefsExceptFor( ['language-dropdown__item',
         'scan-qr-and-go', 'lnk-schoolboys', 'university-lnk',
-        'education-lnk', 'tg-link', 'go-win-yourself', 'lnk-a-jobs', 'nav-rasp-lnk', 'news-lnk-rasp'
+        'education-lnk', 'tg-link', 'go-win-yourself', 'lnk-a-jobs', 'nav-rasp-lnk', 'news-lnk-rasp', 'nav-pro-lnk'
     ] );
     useToggleButton();
     useImageTransition('#central-big-image', [

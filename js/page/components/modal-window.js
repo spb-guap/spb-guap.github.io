@@ -42,7 +42,16 @@ function switchOnPopup_Level1(isReversed) {
 function switchOnPopup_Level2(isReversed)
 {
     switch (switcher) {
-        case 0: {    
+        case 0: {
+            showPopup(
+                () => showPopupWithImage('<img class="modal-window__image modal-window__vertical-content" src="/img/rofls/were-sorry.jpg">',
+                    () => document.querySelector('.modal-window__background')?.classList.add('modal-window__horizontal-content')),
+                `<p style="text-align: center; margin-bottom: 20px; color: #333;">Это точно, ты не врёшь?</p>`,
+                ['Не вру', 'Вру'],
+                    () => document.querySelector('.modal-window__background')?.classList.add('modal-window__vertical-content')
+            );
+        } break;
+        case 1: {    
             showPopup(
                 () => showPopupWithImage('<img class="modal-window__image modal-window__vertical-content" src="/img/500.jpg">',
                     () => document.querySelector('.modal-window__background')?.classList.add('modal-window__horizontal-content')),
@@ -51,7 +60,7 @@ function switchOnPopup_Level2(isReversed)
                     () => document.querySelector('.modal-window__background')?.classList.add('modal-window__vertical-content')
             );
         } break;
-        case 1: {
+        case 2: {
             showPopup(
                 () => showPopupWithImage('<img class="modal-window__image modal-window__vertical-content" src="/img/500.jpg">',
                     () => document.querySelector('.modal-window__background')?.classList.add('modal-window__horizontal-content')),
@@ -60,7 +69,7 @@ function switchOnPopup_Level2(isReversed)
                 () => setTimeout(() => createInteractiveGrid('.modal-window__image-adjusted', 3, 3), 250),
             );
         } break;
-        case 2: {
+        case 3: {
             showPopup(
                 () => showPopupWithImage('<img class="modal-window__image modal-window__vertical-content" src="/img/500.jpg">',
                     () => document.querySelector('.modal-window__background')?.classList.add('modal-window__horizontal-content')),
@@ -69,7 +78,7 @@ function switchOnPopup_Level2(isReversed)
                 () => document.querySelector('.modal-window__background')?.classList.add('modal-window__large-scale', 'modal-window__horizontal-content')
             );
         } break;
-        case 3: {
+        case 4: {
             showPopup(
                 () => showPopupWithImage('<img class="modal-window__image modal-window__vertical-content" src="/img/500.jpg">',
                     () => document.querySelector('.modal-window__background')?.classList.add('modal-window__horizontal-content')),
