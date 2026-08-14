@@ -49,20 +49,12 @@
 }
 
 .pro-section-main__container {
-    width: 70%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
     display: block;
     unicode-bidi: isolate;
-}
-
-.pro-third-section {
-    width: 70%;
-    text-align: right !important;
-    margin-bottom: 1rem !important;
-    opacity: .75 !important;
-    font-size: .875em;
 }
 
     .breadcrumb {
@@ -103,9 +95,6 @@
 
 @media (max-width: 1024px) {
     .pro-section-main__container {
-        width: 100%;
-    }
-    .pro-third-section {
         width: 100%;
     }
 }

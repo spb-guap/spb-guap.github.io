@@ -33,6 +33,7 @@
     /* Flex layout to position elements on opposite sides */
     display: flex;
     align-items: center;             /* vertically center the images */
+    justify-content: center;
     
     /* Width: full width of parent */
     width: 100%;
