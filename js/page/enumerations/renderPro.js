@@ -6,7 +6,7 @@ import { fillSubjectNames } from "./schedule-data/subject-filler.js";
 
 export function renderPro()
 {
-    useModalOnAhrefsExceptFor([], false);
+    useModalOnAhrefsExceptFor(["centered-images-link", "gayshit-lnk"], false);
     
     useModalWithContentOn('.btn-new-search',
         '<p class="modal-window__captcha-title"> Выберите все фото с резисторами на 220 Ω </p>' +
