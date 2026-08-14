@@ -1,17 +1,10 @@
+header {
+    background: #2b161f;
+}
+
 .pro-header-first-section
 {
     background-color: #2b161f;
-}
-
-.pro-header-first-section__container {
-    justify-content: space-between;
-    padding-right: .75rem;
-    padding-left: .75rem;
-    justify-self: center;
-    margin-right: auto;
-    margin-left: auto;
-    width: 70%; 
-    display: flex;
 }
 
 .pro-logo-a {

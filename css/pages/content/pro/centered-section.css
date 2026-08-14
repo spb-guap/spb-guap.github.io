@@ -1,58 +1,189 @@
 /* ---------- SECTION (container) ---------- */
-.centered-section {
-  position: relative;        /* anchor for blue-line absolute positioning */
-  width: 100%;
-  max-width: 1200px;        /* optional max-width, but container is full-width */
-  margin: 2rem auto;        /* center horizontally, add vertical spacing */
-  padding: 1rem 1rem;       /* give space inside, so images have room */
-  background: #f8f9fb;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-radius: 12px;
-
-  /* flex layout to align images vertically centered */
-  display: flex;
-  align-items: center;      /* vertical centering for both images */
-  justify-content: space-between; /* left / right distribution */
-  min-height: 20px;        /* ensure enough height for vertical centering */
-  height: 3rem;
+.centered-images-section {
+    /* Flex layout to position elements on opposite sides */
+    display: flex;
+    align-items: center;             /* vertically center the images */
+    justify-content: space-between;  /* pushes items to left and right */
+    
+    /* Width: full width of parent */
+    width: 100%;
+    
+    /* Height in rem with max-height 15% of viewport height */
+    /* base height in rem */
+    /* height: 10rem; */
+    max-height: 15vh;                /* 15% of viewport height */
+    
+    /* Padding to prevent images from touching edges */
+    padding: 0.5rem 1rem;
+    
+    /* Optional: background to visualize the section */
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    
+    /* Ensure overflow is hidden (prevents overflow) */
+    overflow: hidden;
+    
+    /* Gap between the two items */
+    gap: 1rem;
 }
 
-/* ----- IMAGES (common) ----- */
-.section-image {
-  display: block;           /* removes extra inline spacing */
-  /* height is set via inline 'height' attribute, but we keep it as "own height" */
-  /* we do NOT override height here, so the image keeps its native aspect ratio */
-  /* but we want them to be vertically centered — flex align-items handles that */
-  object-fit: contain;      /* preserve aspect ratio, but not strictly needed */
-  max-width: 45%;           /* prevent overflow, but keep own height */
-  flex-shrink: 0;           /* prevent shrinking if container is narrow */
+/* ---------- SECTION (container) ---------- */
+.centered-images-section__single {
+    /* Flex layout to position elements on opposite sides */
+    display: flex;
+    align-items: center;             /* vertically center the images */
+    
+    /* Width: full width of parent */
+    width: 100%;
+    
+    /* Padding to prevent images from touching edges */
+    padding: 0.5rem 1rem;
+    
+    /* Optional: background to visualize the section */
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    
+    /* Ensure overflow is hidden (prevents overflow) */
+    overflow: hidden;
 }
 
-/* ----- THIN BLUE LINE AT BOTTOM ----- */
-.blue-line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;              /* thin line */
-  background-color: #2563eb; /* vivid blue */
-  border-radius: 0 0 12px 12px; /* match container's rounded bottom */
-  /* if you prefer a pure line without rounded corners, remove border-radius */
+/* ----- THE LINK (anchor) containers ----- */
+.centered-images-link-small {
+    /* Each link takes available space, but shrinks to fit */
+    flex: 0 1 auto;                 /* don't grow, allow shrink, auto basis */
+    
+    /* Maximum width: half of container minus gap */
+    max-width: calc(50% - 0.5rem);
+    
+    /* Maintain aspect ratio of the image */
+    height: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    
+    /* Remove default underline */
+    text-decoration: none;
+    
+    /* Allow the link to shrink if needed */
+    min-width: 0;
 }
 
-/* small screens: stack or adjust spacing */
-@media (max-width: 600px) {
-  .second-section {
-    flex-wrap: wrap;
+/* ----- THE LINK (anchor) containers ----- */
+.centered-images-link-long {
+    /* Each link takes available space, but shrinks to fit */
+    flex: 0 1 auto;                 /* don't grow, allow shrink, auto basis */
+    
+    /* Maximum width: half of container minus gap */
+    max-width: calc(50% - 0.5rem);
+    
+    /* Maintain aspect ratio of the image */
+    /* height: 100%; */
+    
+    display: flex;
+}
+
+/* ----- THE LINK (anchor) containers ----- */
+.centered-images-link {
+    /* Each link takes available space, but shrinks to fit */
+    flex: 0 1 auto;                 /* don't grow, allow shrink, auto basis */
+    
+    /* Maximum width: half of container minus gap */
+    max-width: calc(50% - 0.5rem);
+    
+    /* Maintain aspect ratio of the image */
+    /* height: 100%; */
+    
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 1.5rem;
-    padding: 2rem 1rem;
-  }
-  .section-image {
-    max-width: 80%;
-    height: auto;           /* keep own height but allow resize */
-  }
-  .left-image, .right-image {
-    /* both centered when wrapped */
-  }
+    
+    /* Remove default underline */
+    text-decoration: none;
+    
+    /* Allow the link to shrink if needed */
+    min-width: 0;
 }
+
+/* Specific positioning (though flex handles this) */
+.left-link {
+    /* stays left due to justify-content: space-between */
+}
+
+.right-link {
+    /* stays right due to justify-content: space-between */
+}
+
+/* ----- THE IMAGES ----- */
+.centered-section-image {
+    /* Images scale to fit the container */
+    width: auto;
+    height: 100%;                   /* fill the link's height */
+    max-width: 100%;                /* never exceed container width */
+    max-height: 100%;               /* never exceed container height */
+    
+    /* Maintain aspect ratio */
+    object-fit: contain;            /* scales to fit without cropping */
+    
+    /* Prevent overflow */
+    display: block;
+    
+    /* Optional styling */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
+    /* Smooth transitions */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for the images */
+.centered-section-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ----- RESPONSIVE BEHAVIOR ----- */
+
+/* For very small screens, stack vertically */
+/* @media (max-width: 600px) {
+    .centered-images-section {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        max-height: none;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .centered-images-link {
+        max-width: 100%;
+        width: 100%;
+        height: 200px;
+    }
+    
+    .centered-section-image {
+        height: 100%;
+        width: auto;
+        max-width: 100%;
+    }
+} */
+
+/* For medium screens, adjust height */
+/* @media (min-width: 601px) and (max-width: 1024px) {
+    .centered-images-section {
+        height: 5rem; 
+        max-height: 15vh;
+    }
+} */
+
+/* For landscape orientation or very tall screens */
+/* @media (min-height: 900px) {
+    .centered-images-section {
+        height: 8rem;              
+        max-height: 15vh;
+    }
+}
+*/
