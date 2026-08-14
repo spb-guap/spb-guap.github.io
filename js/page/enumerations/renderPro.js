@@ -18,4 +18,6 @@ export function renderPro()
             createInteractiveGrid('.modal-window__image-adjusted', 4, 4);
         }
     );
+
+    useNavigationRemappingOnTelegramRedirect();
 }
