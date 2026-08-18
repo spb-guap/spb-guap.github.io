@@ -4,7 +4,7 @@ import { showPopupWithImage, useModalOnAhrefsExceptFor } from "../components/mod
 import { showModalWithContent, useModalWithContentOn, wrapImageStringIntoContainer } from "../components/popups/useModalWithContentOn.js";
 import { fillSubjectNames } from "./schedule-data/subject-filler.js";
 
-export function renderDods()
+export function renderOpenDoors()
 {
     useModalOnAhrefsExceptFor(['a-logo-img', 'gayshit-lnk', 'lnk-a-jobs', 'tg-chat', 'tg-channel'], false);
     
