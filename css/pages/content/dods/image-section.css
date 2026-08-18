@@ -1,0 +1,37 @@
+/* ----- main section (container) ----- */
+.image-section {
+  position: relative;              /* anchor for blue-line */
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;               /* center horizontally + top/bottom space */
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: center;         /* horizontally center the wrapper */
+  align-items: center;             /* vertically center the wrapper (if height allows) */
+  min-height: 400px;               /* give some height so vertical centering is visible */
+}
+
+/* ----- IMAGE WRAPPER (the key class) ----- */
+.image-wrapper {
+  display: flex;
+  justify-content: center;         /* horizontally center the anchor */
+  align-items: center;             /* vertically center (if needed) */
+  width: 100%;
+}
+
+.image-wrapper a {
+  display: inline-block;           /* or block, depending on needs */
+  /* or display: flex; if you want more control */
+}
+
+.centered-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}

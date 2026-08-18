@@ -6,33 +6,3 @@ header {
 {
     background-color: #2b161f;
 }
-
-.pro-logo-a {
-    height: inherit;
-    background-color: #2b161f;
-    color: #2b161f;
-}
-
-.pro-header__shortcut-container {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-}
-
-.pro-header__shortcut-item {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    width: 100%;
-    padding-right: calc(var(--bs-gutter-x) * .5);
-    padding-left: calc(var(--bs-gutter-x) * .5);
-    margin-left: auto;
-    margin-right: auto;
-    height: inherit;
-}
-
-.pro-header__shortcut-item img {
-    height: 24px;
-}

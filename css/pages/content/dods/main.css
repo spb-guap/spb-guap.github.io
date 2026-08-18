@@ -1,0 +1,48 @@
+.pro-content-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+}
+
+.pro-content-background {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+}
+
+/* Fixed centered button style */
+.centered-blue-button {
+/* Positioning rules */
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom of the screen */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+
+  /* Button look and feel */
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: 2px solid #0056b3;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  
+  /* Smooth transition for hover */
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover animation (combines center offset with lift effect) */
+.centered-blue-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Active click effect */
+.centered-blue-button:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

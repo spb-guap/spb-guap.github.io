@@ -2,6 +2,7 @@ import { renderIndex } from "../page/enumerations/renderIndex.js";
 import { renderLms } from "../page/enumerations/renderLms.js";
 import { renderRasp } from "../page/enumerations/renderRasp.js";
 import { renderPro } from "../page/enumerations/renderPro.js";
+import { renderDods } from "../page/enumerations/renderDods.js";
 
 export function usePageRouting()
 {
@@ -19,6 +20,9 @@ export function usePageRouting()
         case '/pro/':
             renderPro();
             break;
+        case '/open-doors/':
+            renderDods();
+        break;
         default:
             break;
     }
