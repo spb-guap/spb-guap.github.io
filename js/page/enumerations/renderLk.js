@@ -14,7 +14,7 @@ export function renderLk()
     useModalWithContentOn('.lnk-a-jobs', '<p class="text-centered">Эй парень, в приемку не хочешь устроиться?</p><img class="modal-content__image" src="/img/content/application-comission.jpg"/>')
 
     useModalWithVideoOn('.lk-links-profile', './video/devil.mp4', 900);
-    useModalWithVideoOn('.lk-links-heroes', './video/you-killed-devil.mp4', 900)
+    useModalWithVideoOn('.lk-links-heroes', './video/frodo-waking-up.mp4', 900)
     useModalWithVideoOn('.lk-links-backpack', './video/vaz-sk-crack.mp4', 900);
     useModalWithVideoOn('.lk-links-achievements', './video/flaming-head-man.mp4', 900);
 
