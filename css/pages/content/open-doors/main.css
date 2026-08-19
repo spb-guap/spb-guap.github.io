@@ -1,11 +1,11 @@
-.pro-content-wrapper {
+.open-doors-content-wrapper {
     width: 100%;
     height: 100%;
     background-color: #fff;
     position: absolute;
 }
 
-.pro-content-background {
+.open-doors-content-background {
     width: 100vw;
     height: 100vh;
     background-color: #fff;
@@ -13,7 +13,7 @@
 }
 
 /* Fixed centered button style */
-.centered-blue-button {
+.open-doors-centered-blue-button {
 /* Positioning rules */
   position: fixed;
   bottom: 20px; /* Distance from the bottom of the screen */
@@ -37,12 +37,33 @@
 }
 
 /* Hover animation (combines center offset with lift effect) */
-.centered-blue-button:hover {
+.open-doors-centered-blue-button:hover {
   background-color: #0056b3;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Active click effect */
-.centered-blue-button:active {
+.open-doors-centered-blue-button:active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.open-doors-logo-img-div-right {
+    align-self: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    gap: 2rem;
+    font-weight: bold;
+    color: #003366;
+}
+
+.open-doors-section-main__container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    display: block;
+    unicode-bidi: isolate;
 }

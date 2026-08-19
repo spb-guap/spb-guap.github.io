@@ -1,0 +1,67 @@
+.lk-card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 100%; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.lk-bg-image, 
+.lk-links-content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.lk-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevents image distortion */
+  z-index: 1;
+}
+
+.lk-links-content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column; /* Stacks links vertically */
+  gap: 10px;
+  
+  /* 1. Aligns the grid item to the top and left of the track */
+  justify-self: start; 
+  align-self: start;   
+
+  /* 2. Insert your specific padding here */
+  padding-top: 30px;     /* Change to your specific top value */
+  padding-left: 25px;    /* Change to your specific left value */
+  padding-right: 0px;    /* Optional reset */
+  padding-bottom: 0px;   /* Optional reset */
+}
+
+.lk-links-content a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  
+  /* Smooth animation transition */
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  
+  /* Initial hidden or transparent border so the layout doesn't jump on hover */
+  border: 2px solid transparent; 
+  border-radius: 4px; /* Optional: rounds the border corners */
+  padding: 4px 8px;   /* Optional: adds breathing room for the border */
+}
+
+/* Hover state */
+.lk-links-content a:hover {
+  transform: scale(1.05); /* Scales up by 0.1 */
+  border-color: #cc9900; /* Dark yellow border highlight */
+  background-color: rgba(0, 0, 0, 0.2); /* Optional: slight background darkening for contrast */
+}
+
+/* Click/Active state */
+.lk-links-content a:active {
+  transform: scale(0.95); /* Scales down a little during the click */
+  border-color: #997300;  /* Even darker yellow border color */
+  background-color: rgba(0, 0, 0, 0.4); /* Darker background overlay on click */
+}
