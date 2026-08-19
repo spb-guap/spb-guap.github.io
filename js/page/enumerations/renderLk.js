@@ -20,6 +20,6 @@ export function renderLk()
 
     useModalWithVideoOn('.lk-links-quests', './video/who-was-admin.mp4', 900);
     useModalWithVideoOn('.lk-links-rating', './video/santa-hole-in-the-wall.mp4', 900);
-    useModalWithVideoOn('.lk-links-guild', './video/shaman-blan.mp4', 900);
+    useModalWithVideoOn('.lk-links-guild', './video/shadow-racer.mp4', 900);
     useModalWithVideoOn('.lk-links-settings', './video/towel-strike.mp4', 900);
 }
