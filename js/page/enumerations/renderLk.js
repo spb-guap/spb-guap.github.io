@@ -1,7 +1,6 @@
 import { useNavigationRemappingOnTelegramRedirect } from "../../features/navigation-remapping.js";
-import { createInteractiveGrid } from "../components/captcha/createInteractiveGridOn.js";
-import { showPopupWithImage, useModalOnAhrefsExceptFor } from "../components/modal-window.js";
-import { showModalWithContent, useModalWithContentOn, wrapImageStringIntoContainer } from "../components/popups/useModalWithContentOn.js";
+import { useModalOnAhrefsExceptFor } from "../components/modal-window.js";
+import { useModalWithContentOn } from "../components/popups/useModalWithContentOn.js";
 import { useModalWithVideoOn } from "../components/popups/useModelWithVideoOn.js";
 
 export function renderLk()
