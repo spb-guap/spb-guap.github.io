@@ -23,7 +23,7 @@ export function renderIndex()
     useModalRegistratura('.go-win-yourself');
     useModalWithImageOn('.university-lnk', './img/content/data-satanism.jpg');
     useModalRegistratura('.education-lnk');
-    useModalForSchoolboys('.lnk-schoolboys');
+    // useModalForSchoolboys('.lnk-schoolboys'); // temporarily removed
 
     useNavigationRemappingOnTelegramRedirect();
 
