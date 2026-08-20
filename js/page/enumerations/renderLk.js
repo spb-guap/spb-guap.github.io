@@ -6,7 +6,7 @@ import { useModalWithVideoOn } from "../components/popups/useModelWithVideoOn.js
 export function renderLk()
 {
     useModalOnAhrefsExceptFor(['lk-links-heroes', 'lk-links-profile', 'lk-links-backpack', 'lk-links-achievements', 'lk-links-quests', 'lk-links-rating', 'lk-links-guild', 'lk-links-settings', 'a-logo-img',
-        'gayshit-lnk', 'lnk-a-jobs', 'tg-chat', 'tg-channel'],
+        'gayshit-lnk', 'lnk-a-jobs', 'tg-chat', 'tg-channel', 'exit-lk-nav-lnk'],
     false);
     
     useNavigationRemappingOnTelegramRedirect();

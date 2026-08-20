@@ -13,10 +13,12 @@ button.popup-btn:hover { cursor: pointer; }
   border-radius: 5px; display: flex; flex-direction: column; align-items: center;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   font-size: 1.5rem; animation-name: animatemodal; animation-duration: 0.4s;
-  min-width: 380px;
-  max-width: 95%;
+  min-width: 460px;
+  max-width: 95vw;
+  width: 95%;
   max-height: 95%;
   overflow: scroll;
+  justify-content: center;
 }
 
 .modal-window__button { border-radius: 10px; border: none; padding: 7px 14px; font-size: 1rem; border-radius: 5px; }
@@ -25,13 +27,14 @@ button.popup-btn:hover { cursor: pointer; }
 .modal-window__close-btn { align-self: flex-end; }
 .modal-window__close-btn:hover { cursor: pointer; color: #ff0000; }
 .modal-window__paragraph { font-weight: 400; text-align: center; }
-.modal-window__image { height: 80%; align-self: normal; max-height: 30vw;}
-.modal-window__image-adjusted { align-self: normal; width: 100%; max-height: 30vw;}
+.modal-window__image { height: 80%; align-self: normal; max-height: 90vh;}
+.modal-window__image-adjusted { align-self: normal; width: 100%; }
 .modal-window__image-container {
     position: relative;
     width: -webkit-fill-available;
     height: 80%;
-    align-self: normal;
+    align-self: center; /* Aligns horizontally to the right */
+    display: contents;
 }
 .modal-window__standard-scale {
     /* width: 65vh; */
@@ -61,6 +64,7 @@ button.popup-btn:hover { cursor: pointer; }
     width: 100%;
     max-height: 100%;
     min-width: 300px;
+    justify-content: initial;
   }
   .modal-window__image {
     max-width: -webkit-fill-available; max-height: initial; }
