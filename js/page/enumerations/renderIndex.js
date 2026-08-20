@@ -28,7 +28,7 @@ export function renderIndex()
     useNavigationRemappingOnTelegramRedirect();
 
     useModalWithImageOn('.nav-lng-korean', './img/rofls/kim-chen-un.webp', 900);
-    useModalWithImageOn('.nav-lng-japan', './img/rofls/kojima.jpg', 900);
+    useModalWithImageOn('.nav-lng-japan', './img/rofls/ff-birds.webp', 900);
     useModalWithImageOn('.nav-lng-china', './img/rofls/lgd-team.jpg', 900);
     useImageTransition('#logo-right-img', [
         './img/gayshit-right.jpg', './img/paug2.png', './img/paug3.png',
