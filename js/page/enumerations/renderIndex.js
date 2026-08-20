@@ -4,6 +4,7 @@ import { useModalForSchoolboys } from "../components/popups/useModalForSchoolboy
 import { useModalRegistratura } from "../components/popups/useModalRegistratura.js";
 import { useModalWithContentOn } from "../components/popups/useModalWithContentOn.js";
 import { useModalWithImageOn } from "../components/popups/useModalWithImageOn.js";
+import { useModalWithVideoOn } from "../components/popups/useModelWithVideoOn.js";
 import { useImageTransition } from "../components/togglers/imageTransitioning.js";
 import { useLanguageSwitchersOn } from "../components/togglers/languageList.js";
 import { useToggleButton } from "../components/togglers/useToggleButton.js";
@@ -37,4 +38,7 @@ export function renderIndex()
     useNavigationLnkRemapping();
 
     useModalWithContentOn('.lnk-a-jobs', '<p class="text-centered">Эй парень, в приемку не хочешь устроиться?</p><img class="modal-content__image" src="/img/content/application-comission.jpg"/>')
+
+    useModalWithVideoOn('#bf-in-max-paug', './media/index/shaman-e-blan.mp4', 900);
+    useModalWithVideoOn('#fliushka-img', './media/index/shaman-e-blan.mp4', 900);
 }
