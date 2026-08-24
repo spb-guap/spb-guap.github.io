@@ -4,6 +4,7 @@ import { renderRasp } from "../page/enumerations/renderRasp.js";
 import { renderPro } from "../page/enumerations/renderPro.js";
 import { renderOpenDoors } from "../page/enumerations/renderOpenDoors.js";
 import { renderLk } from "../page/enumerations/renderLk.js";
+import { renderOffers } from "../page/enumerations/renderOffers.js";
 
 export function usePageRouting()
 {
@@ -23,9 +24,12 @@ export function usePageRouting()
             break;
         case '/open-doors/':
             renderOpenDoors();
-        break;
+            break;
         case '/lk/':
             renderLk();
+            break;
+        case '/offers/':
+            renderOffers();
             break;
         default:
             break;
