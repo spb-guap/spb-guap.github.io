@@ -108,6 +108,8 @@
     text-wrap: balance;
 
     -webkit-text-stroke: 1px rgb(121, 121, 121); /* 1px width, black color */
+    
+    word-wrap: break-word;
 }
 
 
@@ -120,6 +122,8 @@
         0 2px 18px rgba(55, 111, 125, 0.20);
 
     -webkit-text-stroke: 1px rgb(183, 183, 183); /* 1px width, black color */
+
+    word-wrap: break-word;
 }
 
 
