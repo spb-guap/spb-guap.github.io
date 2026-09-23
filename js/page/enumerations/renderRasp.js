@@ -9,7 +9,16 @@ const loader = useLoader();
 
 export function renderRasp()
 {
-    useModalOnAhrefsExceptFor(['rasp-logo-a', 'gayshit-lnk', 'lnk-a-jobs', 'tg-chat', 'tg-channel'], true);
+    useModalOnAhrefsExceptFor(['rasp-logo-a',
+        'gayshit-lnk',
+        'lnk-a-offers',
+        'lnk-a-lk',
+        'lnk-a-onlyfans',
+        'lnk-a-pro',
+        'lnk-a-jobs',
+        'tg-chat',
+        'tg-channel'],
+        true);
     
     useModalWithContentOn('.btn-new-search',
         '<p class="modal-window__captcha-title"> Выберите все фото с резисторами на 220 Ω </p>' +

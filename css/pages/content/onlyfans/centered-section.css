@@ -16,6 +16,10 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
+.onlyfans-centered-video-section__single.fit-width {
+    display: contents;
+}
+
 .hidden {
     display: none;
 }

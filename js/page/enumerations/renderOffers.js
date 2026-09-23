@@ -8,7 +8,14 @@ var firstImage = true;
 
 export function renderOffers()
 {
-    useModalOnAhrefsExceptFor(['a-logo-img', 'lnk-a-lk', 'lnk-a-home', 'gayshit-lnk', 'lnk-a-jobs', 'tg-chat', 'tg-channel'], false);
+    useModalOnAhrefsExceptFor(['a-logo-img',
+        'centered-images-link-exit',
+        'lnk-a-lk',
+        'lnk-a-home',
+        'gayshit-lnk',
+        'lnk-a-jobs',
+        'tg-chat',
+        'tg-channel'], false);
     
     useNavigationRemappingOnTelegramRedirect();
 

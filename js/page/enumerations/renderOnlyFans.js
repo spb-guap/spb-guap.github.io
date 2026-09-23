@@ -7,11 +7,13 @@ import { fillSubjectNames } from "./schedule-data/subject-filler.js";
 export function renderOnlyFans()
 {
     useModalOnAhrefsExceptFor(['a-logo-img',
+        'centered-images-link-exit',
         'gayshit-lnk',
-        'lnk-a-offers',
         'tg-chat',
+        'lnk-a-offers',
         'lnk-a-lk',
         'lnk-a-opendoors',
+        'lnk-a-pro',
         'tg-channel'], false);
     
     useNavigationRemappingOnTelegramRedirect();

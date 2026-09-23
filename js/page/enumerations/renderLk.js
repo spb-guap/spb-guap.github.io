@@ -11,7 +11,10 @@ export function renderLk()
         'lk-links-achievements',
         'lk-links-quests', 'lk-links-rating', 'lk-links-guild', 'lk-links-settings', 'a-logo-img',
 
-        'gayshit-lnk', 'lnk-a-jobs', 'lnk-a-onlyfans', 'lnk-a-opendoors', 'tg-chat', 'tg-channel', 'exit-lk-nav-lnk'],
+        'gayshit-lnk',
+        
+        'lnk-a-offers', 'lnk-a-jobs', 'lnk-a-onlyfans', 'lnk-a-opendoors', 'lnk-a-pro',
+        'tg-chat', 'tg-channel', 'exit-lk-nav-lnk'],
     false);
     
     useNavigationRemappingOnTelegramRedirect();

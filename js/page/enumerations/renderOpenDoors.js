@@ -7,10 +7,12 @@ import { fillSubjectNames } from "./schedule-data/subject-filler.js";
 export function renderOpenDoors()
 {
     useModalOnAhrefsExceptFor(['a-logo-img',
+        'centered-images-link-exit',
         'gayshit-lnk',
         'lnk-a-offers',
         'lnk-a-lk',
         'lnk-a-onlyfans',
+        'lnk-a-pro',
         'tg-chat',
         'tg-channel'], false);
     

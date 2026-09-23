@@ -6,7 +6,13 @@ import { fillSubjectNames } from "./schedule-data/subject-filler.js";
 
 export function renderPro()
 {
-    useModalOnAhrefsExceptFor(['a-logo-img', 'gayshit-lnk', 'lnk-a-jobs', 'tg-chat', 'tg-channel'], false);
+    useModalOnAhrefsExceptFor(['a-logo-img', 'gayshit-lnk',
+        'lnk-a-offers',
+        'lnk-a-lk',
+        'lnk-a-onlyfans',
+        'lnk-a-pro',
+        'lnk-a-jobs',
+        'lnk-a-jobs', 'tg-chat', 'tg-channel'], false);
     
     useNavigationRemappingOnTelegramRedirect();
 
