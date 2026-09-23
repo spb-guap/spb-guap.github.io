@@ -21,7 +21,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     
     /* Ensure overflow is hidden (prevents overflow) */
-    overflow: hidden;
+    /* overflow: hidden; */
     
     /* Gap between the two items */
     gap: 1rem;

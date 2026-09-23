@@ -4,14 +4,14 @@ import { showPopupWithImage, useModalOnAhrefsExceptFor } from "../components/mod
 import { showModalWithContent, useModalWithContentOn, wrapImageStringIntoContainer } from "../components/popups/useModalWithContentOn.js";
 import { fillSubjectNames } from "./schedule-data/subject-filler.js";
 
-export function renderOpenDoors()
+export function renderOnlyFans()
 {
     useModalOnAhrefsExceptFor(['a-logo-img',
         'gayshit-lnk',
         'lnk-a-offers',
-        'lnk-a-lk',
-        'lnk-a-onlyfans',
         'tg-chat',
+        'lnk-a-lk',
+        'lnk-a-opendoors',
         'tg-channel'], false);
     
     useNavigationRemappingOnTelegramRedirect();
@@ -22,14 +22,12 @@ export function renderOpenDoors()
 }
 
 function usePlaybackButton() {
-    const vid1 = document.getElementById('video1');
     const vid1Block = document.getElementById('video1-container');
     const vid2 = document.getElementById('video2');
     const vid2Block = document.getElementById('video2-container');
-    const btn = document.getElementById('playBtnSwitchScene');
+    const btn = document.getElementById('acceptAgreementBtn');
 
     btn.addEventListener('click', () => {
-        vid1.pause();
         vid1Block.classList.add('hidden');
         
         vid2Block.classList.remove('hidden');

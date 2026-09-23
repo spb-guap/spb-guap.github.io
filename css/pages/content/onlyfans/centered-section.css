@@ -1,0 +1,21 @@
+.onlyfans-centered-video-section__single {
+    /* Flex layout to position elements on opposite sides */
+    display: flex;
+    align-items: center;             /* vertically center the images */
+    justify-content: center;
+    
+    /* Width: full width of parent */
+    width: 100%;
+    
+    /* Padding to prevent images from touching edges */
+    padding: 0.5rem 1rem;
+    
+    /* Optional: background to visualize the section */
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.hidden {
+    display: none;
+}
