@@ -1,5 +1,6 @@
 @import url(ambassadors-popup.css);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('timer.css');
 
 .ambassadors-html {
     --ambassadors-primary-bg: #4c1a91;

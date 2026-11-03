@@ -34,10 +34,41 @@
             </div>
             <div class="ambassadors-hero__bg-lines"></div>
         </section>
+        
+        <div class="ambassadors-timer" id="ambassadorsTimer" data-deadline="2026-11-15T23:59:59">
+            <div class="ambassadors-timer__topline">
+                <span class="ambassadors-timer__text">До окончания голосования</span>
+                <span class="ambassadors-timer__live">
+                    <span class="ambassadors-timer__dot"></span>
+                    онлайн: <b id="ambassadorsTimerOnline">1 337</b>
+                </span>
+            </div>
 
-        <div class="ambassadors-timer">
-            <span class="ambassadors-timer__text">До окончания голосования</span>
-            <span class="ambassadors-timer__value">12 д 10 ч 14 мин 42 сек</span>
+            <div class="ambassadors-timer__digits" aria-live="polite">
+                <div class="ambassadors-timer__unit">
+                    <span class="ambassadors-timer__num" data-unit="days">00</span>
+                    <span class="ambassadors-timer__label">дней</span>
+                </div>
+                <span class="ambassadors-timer__sep">:</span>
+                <div class="ambassadors-timer__unit">
+                    <span class="ambassadors-timer__num" data-unit="hours">00</span>
+                    <span class="ambassadors-timer__label">часов</span>
+                </div>
+                <span class="ambassadors-timer__sep">:</span>
+                <div class="ambassadors-timer__unit">
+                    <span class="ambassadors-timer__num" data-unit="minutes">00</span>
+                    <span class="ambassadors-timer__label">минут</span>
+                </div>
+                <span class="ambassadors-timer__sep">:</span>
+                <div class="ambassadors-timer__unit">
+                    <span class="ambassadors-timer__num" data-unit="seconds">00</span>
+                    <span class="ambassadors-timer__label">секунд</span>
+                </div>
+            </div>
+
+            <div class="ambassadors-timer__hurry" id="ambassadorsTimerHurry">
+                ⚡ Последний шанс! Успейте проголосовать за своего амбассадора!
+            </div>
         </div>
 
         <a href="/" class="ambassadors-back-link">← К номинациям</a>

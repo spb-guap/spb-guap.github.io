@@ -3,6 +3,7 @@ import { useModalOnAhrefsExceptFor } from "../components/modal-window.js";
 import { useModalWithContentOn } from "../components/popups/useModalWithContentOn.js";
 
 import { useAmbassadorsPage } from './features/ambassadors-features.js';
+import { useAmbassadorsTimer } from "./features/ambassadors-timer.js";
 
 export function renderAmbassadors()
 {
@@ -20,13 +21,16 @@ export function renderAmbassadors()
     
     useNavigationRemappingOnTelegramRedirect();
 
-    const page = useAmbassadorsPage();
-    page.init();
+    useAmbassadorsPage().init();
+
+    useAmbassadorsTimer(document.getElementById('ambassadorsTimer'));
 
     useModalWithContentOn('.ambassadors-btn',
         '<img class="modal-content__image" src="/img/content/hello-authorize-paug.jpg"/>')
     useModalWithContentOn('.ambassadors-btn--large',
         '<img class="modal-content__image" src="/img/content/hello-authorize-paug.jpg"/>')
+
+
 
     // useModalWithVideoOn('.lk-links-profile', './video/devil.mp4', 900);
     // useModalWithVideoOn('.lk-links-heroes', './video/frodo-waking-up.mp4', 900)

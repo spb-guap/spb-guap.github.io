@@ -1,0 +1,166 @@
+/* ============ TIMER (giveaway-style) ============ */
+.ambassadors-timer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px 24px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    background:
+        radial-gradient(circle at 0% 0%, rgba(255, 0, 90, 0.25), transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(124, 77, 255, 0.35), transparent 60%),
+        rgba(0, 0, 0, 0.35);
+    border: 2px solid rgba(255, 60, 120, 0.55);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+        0 0 24px rgba(255, 60, 120, 0.35),
+        0 10px 30px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    overflow: hidden;
+    animation: ambassadorsTimerGlow 2.4s ease-in-out infinite;
+}
+
+@keyframes ambassadorsTimerGlow {
+    0%, 100% { box-shadow: 0 0 24px rgba(255, 60, 120, 0.35), 0 10px 30px rgba(0,0,0,0.4); }
+    50%      { box-shadow: 0 0 40px rgba(255, 60, 120, 0.7),  0 10px 30px rgba(0,0,0,0.4); }
+}
+
+/* Лёгкие «лучи» как на фейковых сайтах */
+.ambassadors-timer::before {
+    content: '';
+    position: absolute;
+    inset: -40%;
+    background: conic-gradient(from 0deg, transparent 0deg, rgba(255,255,255,0.08) 10deg, transparent 20deg);
+    animation: ambassadorsTimerSpin 18s linear infinite;
+    pointer-events: none;
+}
+@keyframes ambassadorsTimerSpin { to { transform: rotate(360deg); } }
+
+.ambassadors-timer__topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    position: relative;
+}
+
+.ambassadors-timer__text { font-weight: 700; }
+
+.ambassadors-timer__live {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffd6e2;
+    font-size: 11px;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.ambassadors-timer__dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #22ff88;
+    box-shadow: 0 0 10px #22ff88, 0 0 20px #22ff88;
+    animation: ambassadorsTimerBlink 1s ease-in-out infinite;
+}
+@keyframes ambassadorsTimerBlink { 50% { opacity: 0.2; } }
+
+/* Цифры */
+.ambassadors-timer__digits {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.ambassadors-timer__unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    min-width: 64px;
+}
+
+.ambassadors-timer__num {
+    display: inline-block;
+    padding: 10px 12px;
+    min-width: 64px;
+    text-align: center;
+    font-family: 'Roboto Mono', 'Roboto', monospace;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1;
+    color: #fff;
+    background: linear-gradient(180deg, #2a0b52, #14052a);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    box-shadow:
+        inset 0 -3px 0 rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 4px 12px rgba(0, 0, 0, 0.4);
+    font-variant-numeric: tabular-nums;
+}
+
+.ambassadors-timer__label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+.ambassadors-timer__sep {
+    font-size: 32px;
+    font-weight: 900;
+    color: #ff3c78;
+    padding-bottom: 22px;
+    animation: ambassadorsTimerColon 1s steps(2, end) infinite;
+}
+@keyframes ambassadorsTimerColon { 50% { opacity: 0.25; } }
+
+/* Строка "Последний шанс" — мигает */
+.ambassadors-timer__hurry {
+    display: none;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffb3c7;
+    letter-spacing: 0.5px;
+    animation: ambassadorsTimerHurry 0.8s ease-in-out infinite;
+}
+.ambassadors-timer--urgent .ambassadors-timer__hurry { display: block; }
+.ambassadors-timer--urgent {
+    border-color: #ff003c;
+    animation: ambassadorsTimerUrgent 0.6s ease-in-out infinite;
+}
+@keyframes ambassadorsTimerHurry {
+    50% { color: #ff003c; text-shadow: 0 0 12px #ff003c; }
+}
+@keyframes ambassadorsTimerUrgent {
+    50% {
+        box-shadow:
+            0 0 60px rgba(255, 0, 60, 0.9),
+            0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Финал */
+.ambassadors-timer--ended .ambassadors-timer__digits { display: none; }
+.ambassadors-timer--ended .ambassadors-timer__hurry {
+    display: block;
+    font-size: 18px;
+    color: #ffd6e2;
+    animation: none;
+}
+
+@media (max-width: 600px) {
+    .ambassadors-timer__num { font-size: 22px; min-width: 46px; padding: 8px 6px; }
+    .ambassadors-timer__unit { min-width: 46px; }
+    .ambassadors-timer__sep { font-size: 22px; padding-bottom: 18px; }
+    .ambassadors-timer__topline { flex-direction: column; align-items: flex-start; gap: 6px; }
+}
