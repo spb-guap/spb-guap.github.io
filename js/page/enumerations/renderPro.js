@@ -12,6 +12,7 @@ export function renderPro()
         'lnk-a-onlyfans',
         'lnk-a-pro',
         'lnk-a-jobs',
+        'lnk-a-opendoors',
         'lnk-a-jobs', 'tg-chat', 'tg-channel'], false);
     
     useNavigationRemappingOnTelegramRedirect();

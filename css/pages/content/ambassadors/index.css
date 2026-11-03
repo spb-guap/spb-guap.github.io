@@ -1,0 +1,362 @@
+@import url(ambassadors-popup.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+.ambassadors-html {
+    --ambassadors-primary-bg: #4c1a91;
+    --ambassadors-accent-purple: #7a42d9;
+    --ambassadors-text-dark: #333333;
+    --ambassadors-text-gray: #777777;
+    --ambassadors-card-bg: #ffffff;
+    --ambassadors-btn-purple: #7c4dff;
+    --ambassadors-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --ambassadors-primary-bg: #4c1a91;
+    --ambassadors-accent-purple: #7a42d9;
+    --ambassadors-text-dark: #333333;
+    --ambassadors-text-gray: #777777;
+    --ambassadors-card-bg: #ffffff;
+    --ambassadors-btn-purple: #7c4dff;
+    --ambassadors-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.ambassadors-body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--ambassadors-primary-bg);
+    background-image:
+        repeating-radial-gradient(circle at 100% 50%, transparent 0, transparent 20px, rgba(255, 255, 255, 0.05) 21px, rgba(255, 255, 255, 0.05) 22px),
+        linear-gradient(135deg, #4c1a91 0%, #2a0b52 100%);
+    color: var(--ambassadors-text-dark);
+    min-height: 100vh;
+}
+
+/* HEADER */
+.ambassadors-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.ambassadors-header__logo {
+    font-weight: 700;
+    font-size: 14px;
+    color: #222;
+}
+
+.ambassadors-header__logo-note {
+    font-weight: normal;
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.ambassadors-header__nav a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+/* BUTTONS */
+.ambassadors-btn {
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.ambassadors-btn--login {
+    background-color: var(--ambassadors-btn-purple);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.ambassadors-btn--login:hover {
+    background-color: var(--ambassadors-accent-purple);
+}
+
+.ambassadors-btn--large {
+    background-color: var(--ambassadors-btn-purple);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.ambassadors-btn--large:hover {
+    background-color: var(--ambassadors-accent-purple);
+}
+
+/* MAIN CONTAINER */
+.ambassadors-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px 60px 20px;
+}
+
+/* HERO SECTION */
+.ambassadors-hero {
+    background: linear-gradient(135deg, rgba(76, 26, 145, 0.9), rgba(42, 11, 82, 0.9));
+    border-radius: 20px;
+    padding: 50px 40px;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--ambassadors-shadow);
+}
+
+.ambassadors-hero__subtitle {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+.ambassadors-hero__title {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.ambassadors-hero__text p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    opacity: 0.8;
+    max-width: 600px;
+}
+
+/* TIMER & ALERT */
+.ambassadors-timer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 13px;
+}
+
+.ambassadors-timer__value {
+    font-weight: 700;
+}
+
+.ambassadors-back-link {
+    display: inline-block;
+    background: white;
+    color: var(--ambassadors-primary-bg);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ambassadors-alert {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    margin-bottom: 30px;
+    box-shadow: var(--ambassadors-shadow);
+}
+
+.ambassadors-voted-count {
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* CARDS GRID */
+.ambassadors-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.ambassadors-card {
+    background: var(--ambassadors-card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--ambassadors-shadow);
+    transition: transform 0.2s;
+}
+
+.ambassadors-card:hover {
+    transform: translateY(-5px);
+}
+
+.ambassadors-card__image {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.ambassadors-card__emoji {
+    opacity: 0.3;
+    font-size: 40px;
+}
+
+/* Модификаторы фона карточек */
+.ambassadors-card__image--pudge { background: linear-gradient(135deg, #a88beb, #f8ceec); }
+.ambassadors-card__image--zeus { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+.ambassadors-card__image--juggernaut { background: linear-gradient(135deg, #ff9a9e, #fecfef); }
+.ambassadors-card__image--drow { background: linear-gradient(135deg, #84fab0, #8fd3f4); }
+.ambassadors-card__image--lina { background: linear-gradient(135deg, #f6d365, #fda085); }
+.ambassadors-card__image--axe { background: linear-gradient(135deg, #89f7fe, #66a6ff); }
+.ambassadors-card__image--invoker { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+.ambassadors-card__image--broodmother { background: linear-gradient(135deg, #fccb90, #d57eeb); }
+.ambassadors-card__image--lycan { background: linear-gradient(135deg, #e0c3fc, #8ec5fc); }
+
+.ambassadors-card__info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.ambassadors-card__name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.ambassadors-card__id {
+    font-size: 13px;
+    color: var(--ambassadors-text-gray);
+    margin-bottom: 10px;
+}
+
+.ambassadors-card__desc {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    min-height: 45px;
+}
+
+.ambassadors-card__badge {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #555;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    width: fit-content;
+}
+
+.ambassadors-btn--details {
+    background: transparent;
+    border: 1px solid #d0d0d0;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.ambassadors-btn--details:hover {
+    background: #f5f5f5;
+}
+
+.ambassadors-card__stats {
+    font-size: 10px;
+    color: #888;
+    line-height: 1.3;
+    font-style: italic;
+    margin-top: auto;
+}
+
+/* BOTTOM CTA */
+.ambassadors-cta {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--ambassadors-shadow);
+}
+
+.ambassadors-cta__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.ambassadors-cta__desc {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .ambassadors-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .ambassadors-header {
+        padding: 15px 20px;
+    }
+
+    .ambassadors-header__nav {
+        display: none;
+    }
+
+    .ambassadors-hero {
+        padding: 30px 20px;
+    }
+
+    .ambassadors-hero__title {
+        font-size: 32px;
+    }
+
+    /* Мобильная версия: 1 колонка Flex-box */
+    .ambassadors-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .ambassadors-card {
+        width: 100%;
+    }
+
+    .ambassadors-card__image {
+        height: 220px;
+    }
+}

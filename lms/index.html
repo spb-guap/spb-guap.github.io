@@ -8,14 +8,63 @@
     <link rel="icon" type="image/x-icon" href="./../img/ico/favicon.ico">
 </head>
 <body>
-    <div class="side-hover-bar left-hover-bar"></div>
-    <header class="header">
+<!-- header / navigation block -->
+    <header class="site-header">
+        <nav class="main-navbar">
+            <!-- left logo: black background, white "Horn" centered -->
+            <div class="main-navbar__brand-logo">
+                <span class="main-navbar__brand-text">Guap</span>
+            </div>
+
+            <!-- dark orange rounded element with black "pub" text -->
+            <div class="main-navbar__pub-badge">
+                <span class="main-navbar__badge-text">LMS</span>
+            </div>
+
+            <!-- optional spacer / right side (not required by spec) -->
+            <div class="main-navbar__flex-spacer"></div>
+        </nav>
     </header>
 
-    <div>
+    <!-- main content: news sections with orange split line -->
+    <main class="page-main">
+        <!-- first news placeholder -->
+        <section class="news-block">
+            <div class="news-block__placeholder">
+                <h2 class="news-block__headline">Breaking: Local pub wins award</h2>
+                <p class="news-block__summary">The Horn Pub has been voted best establishment in the neighbourhood. Regulars celebrate with a round of applause (and drinks).</p>
+            </div>
+        </section>
 
-    </div>
+        <!-- horizontal split line – same dark orange as badge, full width -->
+        <div class="orange-split-line"></div>
+
+        <!-- second news placeholder -->
+        <section class="news-block">
+            <div class="news-block__placeholder">
+                <h2 class="news-block__headline">New craft beer on tap</h2>
+                <p class="news-block__summary">Starting this Friday, the pub introduces a hoppy IPA with notes of citrus and pine. First pint is on the house for the first 20 guests.</p>
+            </div>
+        </section>
+
+        <!-- another split line to show repetition -->
+        <div class="orange-split-line"></div>
+
+        <!-- third news placeholder -->
+        <section class="news-block">
+            <div class="news-block__placeholder">
+                <h2 class="news-block__headline">Live music every Thursday</h2>
+                <p class="news-block__summary">Local blues band "The Horns" will play an acoustic set. No cover charge, just good tunes and cold drinks.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- minimal footer (optional) -->
+    <footer class="page-footer">
+        <p class="page-footer__note">Horn Pub — since 2026</p>
+    </footer>
     <script src="./../lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
     <script src="./../js/site.js" type="module"></script>
 </body>
+
 </html>

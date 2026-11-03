@@ -1,0 +1,103 @@
+/* ============================================
+   BLOCK: ambassadors-popup
+   Модальное окно с досье амбассадора
+   ============================================ */
+
+.ambassadors-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ambassadors-popup--visible {
+    opacity: 1;
+}
+
+.ambassadors-popup__modal {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.ambassadors-popup--visible .ambassadors-popup__modal {
+    transform: translateY(0);
+}
+
+.ambassadors-popup__close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #999;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.ambassadors-popup__close:hover {
+    color: #333;
+}
+
+.ambassadors-popup__title {
+    color: #4c1a91;
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.ambassadors-popup__subtitle {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.ambassadors-popup__section-title {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.ambassadors-popup__problems {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 15px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #7c4dff;
+}
+
+.ambassadors-popup__mute-reason {
+    color: #555;
+    line-height: 1.6;
+    font-size: 15px;
+    font-style: italic;
+}

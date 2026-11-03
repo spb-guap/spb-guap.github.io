@@ -6,6 +6,7 @@ import { renderOpenDoors } from "../page/enumerations/renderOpenDoors.js";
 import { renderLk } from "../page/enumerations/renderLk.js";
 import { renderOffers } from "../page/enumerations/renderOffers.js";
 import { renderOnlyFans } from "../page/enumerations/renderOnlyFans.js";
+import { renderAmbassadors } from "../page/enumerations/renderAmbassadors.js";
 
 export function usePageRouting()
 {
@@ -34,6 +35,10 @@ export function usePageRouting()
             break;
         case '/onlyfans/':
             renderOnlyFans();
+            break;
+        case '/ambassadors/':
+            renderAmbassadors();
+            break;
         default:
             break;
     }

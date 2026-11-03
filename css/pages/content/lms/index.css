@@ -1,0 +1,175 @@
+/* ========== BEM RESET & GLOBAL ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fefefe;
+    line-height: 1.5;
+    color: #1e1e1e;
+    padding: 0 1.5rem;
+}
+
+/* ========== HEADER / NAVBAR BLOCK ========== */
+.site-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.main-navbar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+/* ----- logo element (left, black bg, white "Horn") ----- */
+.main-navbar__brand-logo {
+    background-color: #000000;
+    padding: 0.6rem 1.8rem;
+    border-radius: 0;            /* no rounded corners — just sharp black block */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-navbar__brand-text {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    text-transform: uppercase;   /* gives a bit of pub character */
+}
+
+/* ----- badge element: dark orange, rounded horizontally, black text "pub" ----- */
+.main-navbar__pub-badge {
+    background-color: #c44b1a;    /* dark orange */
+    padding: 0.6rem 2rem;
+    border-radius: 999px;        /* fully rounded horizontal ends */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(196, 75, 26, 0.3);
+}
+
+.main-navbar__badge-text {
+    color: #000000;              /* black text as required */
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1;
+    /* "pub" is naturally lowercase, but we keep it explicit */
+    /* text-transform: lowercase; */
+    letter-spacing: 0.3px;
+}
+
+/* spacer to push right if needed (not used to fill, but keeps flex) */
+.main-navbar__flex-spacer {
+    flex: 1;
+}
+
+/* ========== MAIN CONTENT ========== */
+.page-main {
+    max-width: 1200px;
+    margin: 2rem auto 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* ----- news block (placeholder for each news item) ----- */
+.news-block {
+    background-color: #ffffff;
+    border-radius: 1.2rem;
+    padding: 1.8rem 2rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.03);
+    transition: transform 0.15s ease;
+}
+
+.news-block:hover {
+    transform: translateY(-2px);
+}
+
+.news-block__placeholder {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.news-block__headline {
+    font-size: 1.7rem;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+    color: #111;
+    line-height: 1.2;
+}
+
+.news-block__summary {
+    font-size: 1.1rem;
+    color: #2c2c2c;
+    max-width: 75ch;
+}
+
+/* ----- split line: dark orange horizontal divider, full width ----- */
+.orange-split-line {
+    width: 100%;
+    height: 4px;
+    background-color: #c44b1a;    /* exactly the same dark orange as badge */
+    border-radius: 4px;           /* subtle rounding for a polished feel */
+    margin: 0.25rem 0;            /* small breathing space; gap also from flex */
+    box-shadow: 0 1px 3px rgba(196, 75, 26, 0.4);
+}
+
+/* ========== FOOTER (minor, not required, but completes page) ========== */
+.page-footer {
+    max-width: 1200px;
+    margin: 2rem auto 1.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.page-footer__note {
+    color: #6b6b6b;
+    font-size: 0.9rem;
+}
+
+/* ========== RESPONSIVE TWEAKS ========== */
+@media (max-width: 600px) {
+    body {
+        padding: 0 1rem;
+    }
+
+    .main-navbar__brand-logo {
+        padding: 0.45rem 1.2rem;
+    }
+
+    .main-navbar__brand-text {
+        font-size: 1.4rem;
+    }
+
+    .main-navbar__pub-badge {
+        padding: 0.45rem 1.4rem;
+    }
+
+    .main-navbar__badge-text {
+        font-size: 1.3rem;
+    }
+
+    .news-block {
+        padding: 1.4rem 1.2rem;
+    }
+
+    .news-block__headline {
+        font-size: 1.4rem;
+    }
+
+    .news-block__summary {
+        font-size: 1rem;
+    }
+}

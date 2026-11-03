@@ -1,0 +1,150 @@
+
+/* ================================
+   Block: notification
+   ================================ */
+
+.notification-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+
+    width: min(360px, calc(100vw - 40px));
+
+    pointer-events: none;
+}
+
+.notification {
+    --notification-background: #202328;
+    --notification-border: #30343b;
+    --notification-accent: #75b900;
+    --notification-title: #dce8cf;
+    --notification-muted: #9b9da3;
+
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    padding: 8px 10px;
+
+    overflow: hidden;
+    background: var(--notification-background);
+    border: 1px solid var(--notification-border);
+    border-radius: 2px;
+
+    box-shadow: 0 5px 18px rgb(0 0 0 / 35%);
+
+    color: var(--notification-muted);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+
+    pointer-events: auto;
+    will-change: transform, opacity;
+}
+
+/* Elements */
+
+.notification__image {
+    display: block;
+    flex: 0 0 52px;
+
+    width: 52px;
+    height: 52px;
+
+    object-fit: cover;
+    background: #15171a;
+}
+
+.notification__accent {
+    flex: 0 0 3px;
+    width: 3px;
+    margin: -8px 0;
+    background: var(--notification-accent);
+}
+
+.notification__content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+    overflow: hidden;
+}
+
+.notification__title,
+.notification__middle,
+.notification__bottom {
+    display: block;
+
+    min-width: 0;
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.notification__title {
+    color: var(--notification-title);
+    font-weight: 700;
+}
+
+.notification__middle {
+    color: var(--notification-muted);
+}
+
+.notification__bottom {
+    color: var(--notification-accent);
+}
+
+/* Modifiers: animation states */
+
+.notification--entering {
+    animation: notification-roll-in 350ms ease-out both;
+}
+
+.notification--leaving {
+    animation: notification-roll-out 400ms ease-in both;
+}
+
+@keyframes notification-roll-in {
+    from {
+        opacity: 0;
+        transform: translateY(110%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes notification-roll-out {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(110%);
+    }
+}
+
+/* Accessibility: respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .notification--entering,
+    .notification--leaving {
+        animation-duration: 1ms;
+    }
+}
