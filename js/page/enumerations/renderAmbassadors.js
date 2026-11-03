@@ -14,7 +14,7 @@ export function renderAmbassadors()
 
         'gayshit-lnk',
         
-        'lnk-a-offers', 'lnk-a-jobs', 'lnk-a-onlyfans', 'lnk-a-opendoors', 'lnk-a-pro',
+        'lnk-a-offers', 'lnk-a-jobs', 'lnk-a-lk', 'lnk-a-onlyfans', 'lnk-a-opendoors', 'lnk-a-pro',
         'tg-chat', 'tg-channel', 'exit-lk-nav-lnk', 'ambassadors-back-link', 'ambassadors-header__link'],
     false);
     

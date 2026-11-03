@@ -41,6 +41,8 @@
         linear-gradient(135deg, #4c1a91 0%, #2a0b52 100%);
     color: var(--ambassadors-text-dark);
     min-height: 100vh;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* HEADER */
